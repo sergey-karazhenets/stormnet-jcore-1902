@@ -11,7 +11,14 @@ class IfElseTask {
    * то следует вернуть разность между x и y.
    */
   int ifElse(int x, int y) {
-    throw new TaskNotImplementedException();
+    int value = 0;
+    int res = x*y;
+    int res1 = x-y;
+      if (res>10){
+        value = 42;
+      }
+      if (res<=10) { value = x - y;}
+    return value;
   }
 
   /**
@@ -22,7 +29,11 @@ class IfElseTask {
    *   - на 4, если x больше либо равно 15 и y больше 15.
    */
   int ifElseIf(float x, float y) {
-    throw new TaskNotImplementedException();
+    float del = x/y;
+    float res = del*2;
+    int res1
+  }
+    if (x<10){;
   }
 
   /**
