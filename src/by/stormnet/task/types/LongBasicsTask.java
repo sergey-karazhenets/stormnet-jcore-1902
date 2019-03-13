@@ -8,27 +8,27 @@ class LongBasicsTask {
    * How many bits in the memory is long occupy?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 64;
   }
 
   /**
    * How many bytes in the memory is long occupy?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 8;
   }
 
   /**
    * What is minimum value can hold long?
    */
   long minValue() {
-    throw new TaskNotImplementedException();
+    return Long.MIN_VALUE;
   }
 
   /**
    * What is maximum value can hold long?
    */
   long maxValue() {
-    throw new TaskNotImplementedException();
+    return Long.MAX_VALUE;
   }
 }

@@ -8,20 +8,20 @@ class BooleanBasicsTask {
    * How many values can represent boolean type?
    */
   int possibleValuesCount() {
-    throw new TaskNotImplementedException();
+    return 2;
   }
 
   /**
    * Should return {@code false} value.
    */
   boolean returnFalse() {
-    throw new TaskNotImplementedException();
+    return false;
   }
 
   /**
    * Should return {@code true} value.
    */
   boolean returnTrue() {
-    throw new TaskNotImplementedException();
+    return true;
   }
 }

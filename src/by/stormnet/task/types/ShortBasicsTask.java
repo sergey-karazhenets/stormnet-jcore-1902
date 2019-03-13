@@ -8,27 +8,27 @@ class ShortBasicsTask {
    * How many bits in the memory is short occupy?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 16;
   }
 
   /**
    * How many bytes in the memory is short occupy?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 2;
   }
 
   /**
    * What is minimum value can hold short?
    */
   short minValue() {
-    throw new TaskNotImplementedException();
+    return Short.MIN_VALUE;
   }
 
   /**
    * What is maximum value can hold short?
    */
   short maxValue() {
-    throw new TaskNotImplementedException();
+    return Short.MAX_VALUE;
   }
 }
