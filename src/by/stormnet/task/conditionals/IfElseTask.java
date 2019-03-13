@@ -41,6 +41,8 @@ class IfElseTask {
    * Если не выполняется ни одно из условий, то нужно вернуть исходное значение x.
    */
   int ifElseIfElse(int x) {
-    throw new TaskNotImplementedException();
+    if (x % 2 == 0) {return x*2;}
+      if (x % 3 == 0) {return x*3;} else return x;
+    }
   }
-}
+
