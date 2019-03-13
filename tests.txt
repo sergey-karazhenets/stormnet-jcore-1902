@@ -1,1 +1,1 @@
---select-package=by.stormnet.task.numsys
+--select-class=by.stormnet.task.types.BooleanBasicsTaskTest
