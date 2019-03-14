@@ -11,7 +11,13 @@ class IfElseTask {
    * то следует вернуть разность между x и y.
    */
   int ifElse(int x, int y) {
-    throw new TaskNotImplementedException();
+    int result = x * y;
+    if (result > 10) {
+      result = 42;
+    } else {
+      result = x - y;
+    }
+    return result;
   }
 
   /**
@@ -22,7 +28,17 @@ class IfElseTask {
    *   - на 4, если x больше либо равно 15 и y больше 15.
    */
   int ifElseIf(float x, float y) {
-    throw new TaskNotImplementedException();
+    int a = (int) x;
+    int b = (int) y;
+    int result = a / b;
+    if (a < 10) {
+      result = result * 2;
+    } else if (a >= 10 && a < 15) {
+      result *= 3;
+    } else if (a >= 15 && b > 15) {
+      result *= 4;
+    }
+    return result;
   }
 
   /**
@@ -33,6 +49,19 @@ class IfElseTask {
    * Если не выполняется ни одно из условий, то нужно вернуть исходное значение x.
    */
   int ifElseIfElse(int x) {
-    throw new TaskNotImplementedException();
+    int result = x;
+    if (x % 2 == 0) {
+      result *= 2;
+      System.out.println(result);
+    } else {
+      result = x;
+    }
+    if (x % 3 == 0) {
+      result *= 3;
+      System.out.println(result);
+    } else {
+      result = x;
+    }
+    return result;
   }
-}
+  }
