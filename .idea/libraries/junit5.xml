@@ -13,6 +13,7 @@
       <root url="jar://$USER_HOME$/.ideaLibSources/junit-platform-console-1.4.0-sources.jar!/" />
       <root url="jar://$USER_HOME$/.ideaLibSources/junit-platform-launcher-1.4.0-sources.jar!/" />
       <root url="jar://$USER_HOME$/.ideaLibSources/junit-platform-engine-1.4.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/junit-jupiter-params-5.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
