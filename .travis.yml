@@ -1,4 +1,4 @@
 language: java
 sudo: false
 jdk: oraclejdk11
-script: ./launcher.sh
+script: ./launcher/launcher.sh
