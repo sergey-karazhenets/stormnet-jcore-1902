@@ -51,20 +51,17 @@ class IfElseTask {
   int ifElseIfElse(int x) {
     int result = x;
     if (x % 2 == 0) {
-      System.out.println("Число " + x + " чётное!");
-      int result1 = x * 2;
-      return result1;
-      } else {
-      System.out.println("Число " + x + " нечётное! Проверяем следующее условие!");
+      result *= 2;
+      System.out.println(result);
+    } else {
+      result = x;
     }
     if (x % 3 == 0) {
-      System.out.println("Число " + x + " делится на три, без остатка!");
-      int result2 = x * 3;
-      return result2;
-    }  else {
-      System.out.println("Ни одно из условий не выполняется!");
+      result *= 3;
+      System.out.println(result);
+    } else {
+      result = x;
     }
-    System.out.println("Исходное значение x: " + x);
-    return x;
-    }
-}
+    return result;
+  }
+  }
