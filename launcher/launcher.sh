@@ -10,6 +10,10 @@ if [[ ! -d "src" && ! -d "test" ]]; then
   exit 1
 fi
 
+echo "Environment:"
+echo "- javac" && javac -J-Xmx32m -version && echo
+echo "- jvm" && java -Xmx32m -version && echo
+
 COMPILE_OUT_DIR="compile-out"
 LIB_DIR="lib"
 
