@@ -49,14 +49,14 @@ class IfElseTask {
    */
   int ifElseIfElse(int x) {
 
-    int returnValue=0;
+
     if ((x%2)==0){
-      returnValue=x*2;
+      return x*2;
     } else if ((x%3)==0){
-      returnValue=x*3;
+      return x*3;
     } else {
-      returnValue=x;
+      return x;
     }
-    return returnValue;
+
   }
 }
