@@ -8,48 +8,48 @@ class FloatBasicsTask {
    * How many bits in the memory is float occupy?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 4*8;
   }
 
   /**
    * How many bytes in the memory is float occupy?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 4;
   }
 
   /**
    * What is minimum value can hold float?
    */
   float minValue() {
-    throw new TaskNotImplementedException();
+    return  Float.MIN_VALUE;
   }
 
   /**
    * What is maximum value can hold float?
    */
   float maxValue() {
-    throw new TaskNotImplementedException();
+    return Float.MAX_VALUE;
   }
 
   /**
    * Return positive infinity represented by float number.
    */
   float positiveInfinity() {
-    throw new TaskNotImplementedException();
+    return Float.POSITIVE_INFINITY;
   }
 
   /**
    * Return negative infinity represented by float number.
    */
   float negativeInfinity() {
-    throw new TaskNotImplementedException();
+    return Float.NEGATIVE_INFINITY;
   }
 
   /**
    * Return non a number (NaN) represented by float number.
    */
   float nan() {
-    throw new TaskNotImplementedException();
+    return 0.0f/0.0f;
   }
 }

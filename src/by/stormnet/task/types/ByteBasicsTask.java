@@ -8,27 +8,27 @@ class ByteBasicsTask {
    * How many bits in the memory is byte occupy?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 8;
   }
 
   /**
    * How many bytes in the memory is byte occupy?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 1;
   }
 
   /**
    * What is minimum value can hold 1 byte?
    */
   byte minValue() {
-    throw new TaskNotImplementedException();
+    return -128;
   }
 
   /**
    * What is maximum value can hold 1 byte?
    */
   byte maxValue() {
-    throw new TaskNotImplementedException();
+    return 127;
   }
 }

@@ -8,62 +8,62 @@ class AboutTypesTask {
    * How many primitive types exist in Java?
    */
   int primitiveTypesCount() {
-    throw new TaskNotImplementedException();
+    return 8;
   }
 
   /**
    * Names of all primitive types separated by the comma.
    */
   String primitiveTypes() {
-    throw new TaskNotImplementedException();
+    return  "float,char,boolean,double,byte,int,short,long";
   }
 
   /**
    * Names of all boxed primitive types separated by the comma.
    */
   String boxedPrimitiveTypes() {
-    throw new TaskNotImplementedException();
+    return "java.lang.Float,java.lang.Character,java.lang.Boolean,java.lang.Double,java.lang.Byte,java.lang.Integer,java.lang.Short,java.lang.Long";
   }
 
   /**
    * Names of all numeric primitive types separated by the comma.
    */
   String numericPrimitiveTypes() {
-    throw new TaskNotImplementedException();
+    return "char,byte,int,short,long";
   }
 
   /**
    * Names of all floating-point numeric primitive types separated by the comma.
    */
   String floatingPointNumericPrimitiveTypes() {
-    throw new TaskNotImplementedException();
+    return "double,float" ;
   }
 
   /**
    * Name of the logical type.
    */
   String logicalType() {
-    throw new TaskNotImplementedException();
+    return "boolean";
   }
 
   /**
    * Name of the boxed logical type.
    */
   String boxedLogicalType() {
-    throw new TaskNotImplementedException();
+    return  "java.lang.Boolean";
   }
 
   /**
    * What's the name of the type which represents nothing?
    */
   String nothingType() {
-    throw new TaskNotImplementedException();
+    return "void";
   }
 
   /**
    * What's the name of the boxed type which represents nothing?
    */
   String boxedNothingType() {
-    throw new TaskNotImplementedException();
+    return "java.lang.Void";
   }
 }

@@ -8,13 +8,13 @@ class CharBasicsTask {
    * How many bits in the memory is char occupy?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 16;
   }
 
   /**
    * How many bytes in the memory is char occupy?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 2;
   }
 }

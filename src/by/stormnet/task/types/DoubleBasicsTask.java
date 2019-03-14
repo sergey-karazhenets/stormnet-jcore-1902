@@ -8,48 +8,48 @@ class DoubleBasicsTask {
    * How many bits in the memory is double occupy?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 8*8;
   }
 
   /**
    * How many bytes in the memory is double occupy?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 8;
   }
 
   /**
    * What is minimum value can hold double?
    */
   double minValue() {
-    throw new TaskNotImplementedException();
+    return Double.MIN_VALUE;
   }
 
   /**
    * What is maximum value can hold double?
    */
   double maxValue() {
-    throw new TaskNotImplementedException();
+    return Double.MAX_VALUE;
   }
 
   /**
    * Return positive infinity represented by double number.
    */
   double positiveInfinity() {
-    throw new TaskNotImplementedException();
+    return Double.POSITIVE_INFINITY;
   }
 
   /**
    * Return negative infinity represented by double number.
    */
   double negativeInfinity() {
-    throw new TaskNotImplementedException();
+    return Double.NEGATIVE_INFINITY;
   }
 
   /**
    * Return non a number (NaN) represented by double number.
    */
   double nan() {
-    throw new TaskNotImplementedException();
+    return Double.NaN;
   }
 }

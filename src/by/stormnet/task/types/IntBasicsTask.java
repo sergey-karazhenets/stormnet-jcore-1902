@@ -8,27 +8,27 @@ class IntBasicsTask {
    * How many bits in the memory is int occupy?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 4*8;
   }
 
   /**
    * How many bytes in the memory is int occupy?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 4;
   }
 
   /**
    * What is minimum value can hold int?
    */
   int minValue() {
-    throw new TaskNotImplementedException();
+    return Integer.MIN_VALUE;
   }
 
   /**
    * What is maximum value can hold int?
    */
   int maxValue() {
-    throw new TaskNotImplementedException();
+    return Integer.MAX_VALUE;
   }
 }
