@@ -1,1 +1,9 @@
---select-class=by.stormnet.VerifyLauncherTest
+--select-class=by.stormnet.task.numsys.NumeralSystemsTaskTest
+--select-package=by.stormnet.task.types
+--select-package=by.stormnet.task.operators
+--select-class=by.stormnet.task.conditionals.IfElseTaskTest
+--select-class=by.stormnet.task.conditionals.SwitchTaskTest
+--select-class=by.stormnet.task.loops.DoWhileLoopTaskTest
+--select-class=by.stormnet.task.loops.ForLoopTaskTest
+--select-class=by.stormnet.task.loops.WhileLoopTaskTest
+--select-class=by.stormnet.task.arrays.ArraysTaskTest
