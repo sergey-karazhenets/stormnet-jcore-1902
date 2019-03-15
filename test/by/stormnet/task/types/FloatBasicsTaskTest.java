@@ -5,7 +5,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 import org.junit.jupiter.api.Test;
 
-class FloatBasicsTaskTest {
+public class FloatBasicsTaskTest {
 
   private final FloatBasicsTask task = new FloatBasicsTask();
 

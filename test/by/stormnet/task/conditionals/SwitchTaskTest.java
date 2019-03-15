@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.equalTo;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-class SwitchTaskTest {
+public class SwitchTaskTest {
 
   private final SwitchTask task = new SwitchTask();
 
