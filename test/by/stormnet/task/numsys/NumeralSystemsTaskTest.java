@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.equalToIgnoringCase;
 
 import org.junit.jupiter.api.Test;
 
-class NumeralSystemsTaskTest {
+public class NumeralSystemsTaskTest {
 
   private final NumeralSystemsTask task = new NumeralSystemsTask();
 

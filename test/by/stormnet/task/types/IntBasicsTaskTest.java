@@ -5,7 +5,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 import org.junit.jupiter.api.Test;
 
-class IntBasicsTaskTest {
+public class IntBasicsTaskTest {
 
   private final IntBasicsTask task = new IntBasicsTask();
 
