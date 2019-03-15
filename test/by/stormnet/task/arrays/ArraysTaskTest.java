@@ -3,9 +3,8 @@ package by.stormnet.task.arrays;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
+import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -22,7 +21,7 @@ class ArraysTaskTest {
   }
 
   static Collection<Arguments> arrayLengthArgs() {
-    return List.of(
+    return Arrays.asList(
         Arguments.of(new int[0], 0),
         Arguments.of(new int[] { 1 }, 1),
         Arguments.of(new int[] { 1, 2, 3 }, 3),
@@ -37,7 +36,7 @@ class ArraysTaskTest {
   }
 
   static Collection<Arguments> firstElementArgs() {
-    return List.of(
+    return Arrays.asList(
         Arguments.of(new int[] { 1, 4 }, 1),
         Arguments.of(new int[] { 7, 4, 3 }, 7),
         Arguments.of(new int[] { 3, 5, 6, 4, 8 }, 3)
@@ -51,7 +50,7 @@ class ArraysTaskTest {
   }
 
   static Collection<Arguments> lastElementArgs() {
-    return List.of(
+    return Arrays.asList(
         Arguments.of(new int[] { 1, 4 }, 4),
         Arguments.of(new int[] { 7, 4, 3 }, 3),
         Arguments.of(new int[] { 3, 5, 6, 4, 8 }, 8)
@@ -65,7 +64,7 @@ class ArraysTaskTest {
   }
 
   static Collection<Arguments> elementsSumArgs() {
-    return List.of(
+    return Arrays.asList(
         Arguments.of(new int[] { 1, 4, 3, 5, 6, 9, 1, 4, 5 }, 25),
         Arguments.of(new int[] { 6, 2, 8, -5, 8, 1, 1, 4 }, 9)
     );
@@ -78,7 +77,7 @@ class ArraysTaskTest {
   }
 
   static Collection<Arguments> selectElementsArgs() {
-    return List.of(
+    return Arrays.asList(
         Arguments.of(
             new int[] { 1, 4, 3, 5, 6, 9, 1, 4, 5 },
             new int[] { 5, 9, 1, 4 }
@@ -112,7 +111,7 @@ class ArraysTaskTest {
   }
 
   static Collection<Arguments> rowsSumArgs() {
-    return List.of(
+    return Arrays.asList(
         Arguments.of(
             new int[][] {
                 { 1, 3, 5 },
