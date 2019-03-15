@@ -5,14 +5,14 @@ import by.stormnet.task.TaskNotImplementedException;
 class CharBasicsTask {
 
   /**
-   * How many bits in the memory is char occupy?
+   * Сколько бит в памяти занимает значение типа char?
    */
   int bitsInMemory() {
     return 16;
   }
 
   /**
-   * How many bytes in the memory is char occupy?
+   * Сколько байт в памяти занимает значение типа char?
    */
   int bytesInMemory() {
     return 2;

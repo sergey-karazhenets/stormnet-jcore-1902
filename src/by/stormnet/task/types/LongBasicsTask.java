@@ -5,28 +5,28 @@ import by.stormnet.task.TaskNotImplementedException;
 class LongBasicsTask {
 
   /**
-   * How many bits in the memory is long occupy?
+   * Сколько бит в памяти занимает значение типа long?
    */
   int bitsInMemory() {
     return 8*8;
   }
 
   /**
-   * How many bytes in the memory is long occupy?
+   * Сколько байт в памяти занимает значение типа long?
    */
   int bytesInMemory() {
     return 8;
   }
 
   /**
-   * What is minimum value can hold long?
+   * Какое минимальное число можно присвоить переменной с типом long?
    */
   long minValue() {
     return Long.MIN_VALUE;
   }
 
   /**
-   * What is maximum value can hold long?
+   * Какое максимальное число можно присвоить переменной с типом long?
    */
   long maxValue() {
     return Long.MAX_VALUE;
