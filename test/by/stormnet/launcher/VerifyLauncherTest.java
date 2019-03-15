@@ -1,4 +1,4 @@
-package by.stormnet;
+package by.stormnet.launcher;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
