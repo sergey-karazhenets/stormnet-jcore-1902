@@ -9,7 +9,11 @@ class DoWhileLoopTask {
    * сумму чисел от 1 до 57 (не включительно).
    */
   int calculateSum() {
-    throw new TaskNotImplementedException();
+    int i=1;
+    do{
+      i++;
+    }while(i<57);
+    return i;
   }
 
   /**
@@ -21,7 +25,18 @@ class DoWhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSum(int x, int y) {
-    throw new TaskNotImplementedException();
+    int i=x;
+    do{
+      if(x==y){
+        return 0;
+      }else if(x<y){
+        x++;
+      }else if(x>y){
+        x--;
+      }
+      i++;
+    }while(i<y);
+    return i;
   }
 
   /**
