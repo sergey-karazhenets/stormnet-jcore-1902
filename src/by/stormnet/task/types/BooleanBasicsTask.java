@@ -5,21 +5,21 @@ import by.stormnet.task.TaskNotImplementedException;
 class BooleanBasicsTask {
 
   /**
-   * How many values can represent boolean type?
+   * Как много значений может хранить/представлять тип boolean?
    */
   int possibleValuesCount() {
     return 2;
   }
 
   /**
-   * Should return {@code false} value.
+   * Верните значение false.
    */
   boolean returnFalse() {
     return false;
   }
 
   /**
-   * Should return {@code true} value.
+   * Верните значение true.
    */
   boolean returnTrue() {
     return true;

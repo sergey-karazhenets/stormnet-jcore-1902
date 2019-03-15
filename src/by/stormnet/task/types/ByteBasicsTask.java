@@ -5,21 +5,21 @@ import by.stormnet.task.TaskNotImplementedException;
 class ByteBasicsTask {
 
   /**
-   * How many bits in the memory is byte occupy?
+   * Сколько бит в памяти занимает один байт?
    */
   int bitsInMemory() {
     return 8;
   }
 
   /**
-   * How many bytes in the memory is byte occupy?
+   * Сколько байт в памяти занимает один байт?
    */
   int bytesInMemory() {
     return 1;
   }
 
   /**
-   * What is minimum value can hold 1 byte?
+   * Какое минимальное число можно присвоить перменной с типом byte?
    */
   byte minValue() {
     return -128;
@@ -27,7 +27,7 @@ class ByteBasicsTask {
   }
 
   /**
-   * What is maximum value can hold 1 byte?
+   * Какое максимальное число можно присвоить перменной с типом byte?
    */
   byte maxValue() {
     return 127;

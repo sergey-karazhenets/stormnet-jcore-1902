@@ -5,63 +5,63 @@ import by.stormnet.task.TaskNotImplementedException;
 class AboutTypesTask {
 
   /**
-   * How many primitive types exist in Java?
+   * Сколько примитивных типов существует в Java?
    */
   int primitiveTypesCount() {
     return 8;
   }
 
   /**
-   * Names of all primitive types separated by the comma.
+   * Названия всех примитивных типов, разделенные запятой.
    */
   String primitiveTypes() {
     return "int,double,char,float,byte,short,long,boolean";
   }
 
   /**
-   * Names of all boxed primitive types separated by the comma.
+   * Названия всех запакованых примитивных типов, разделенные запятой.
    */
   String boxedPrimitiveTypes() {
     return "java.lang.Integer,java.lang.Double,java.lang.Character,java.lang.Float,java.lang.Byte,java.lang.Short,java.lang.Long,java.lang.Boolean";
   }
 
   /**
-   * Names of all numeric primitive types separated by the comma.
+   * Названия всех числовых и целочисленных примитивных типов, разделенные запятой.
    */
   String numericPrimitiveTypes() {
     return "short,int,long,byte,char";
   }
 
   /**
-   * Names of all floating-point numeric primitive types separated by the comma.
+   * Названия всех вещественных примитивных типов, разделенные запятой.
    */
   String floatingPointNumericPrimitiveTypes() {
     return "float,double";
   }
 
   /**
-   * Name of the logical type.
+   * Название логического типа.
    */
   String logicalType() {
     return "boolean";
   }
 
   /**
-   * Name of the boxed logical type.
+   * Название запакованного логического типа.
    */
   String boxedLogicalType() {
     return "java.lang.Boolean";
   }
 
   /**
-   * What's the name of the type which represents nothing?
+   * Название типа, который не может хранить данные и обозначает, что метод ничего не возвращает.
    */
   String nothingType() {
     return "void";
   }
 
   /**
-   * What's the name of the boxed type which represents nothing?
+   * Название запакованного типа, который не может хранить данные и обозначает, что метод ничего не возвращает.
    */
   String boxedNothingType() {
     return "java.lang.Void";

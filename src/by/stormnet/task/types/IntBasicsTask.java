@@ -5,28 +5,28 @@ import by.stormnet.task.TaskNotImplementedException;
 class IntBasicsTask {
 
   /**
-   * How many bits in the memory is int occupy?
+   * Сколько бит в памяти занимает значение типа int?
    */
   int bitsInMemory() {
     return 32;
   }
 
   /**
-   * How many bytes in the memory is int occupy?
+   * Сколько байт в памяти занимает значение типа int?
    */
   int bytesInMemory() {
     return 4;
   }
 
   /**
-   * What is minimum value can hold int?
+   * Какое минимальное число можно присвоить переменной с типом int?
    */
   int minValue() {
     return Integer.MIN_VALUE;
   }
 
   /**
-   * What is maximum value can hold int?
+   * Какое максимальное число можно присвоить переменной с типом int?
    */
   int maxValue() {
     return Integer.MAX_VALUE;
