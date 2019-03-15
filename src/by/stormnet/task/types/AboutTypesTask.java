@@ -5,63 +5,63 @@ import by.stormnet.task.TaskNotImplementedException;
 class AboutTypesTask {
 
   /**
-   * How many primitive types exist in Java?
+   * Сколько примитивных типов существует в Java?
    */
   int primitiveTypesCount() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * Names of all primitive types separated by the comma.
+   * Названия всех примитивных типов, разделенные запятой.
    */
   String primitiveTypes() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * Names of all boxed primitive types separated by the comma.
+   * Названия всех запакованых примитивных типов, разделенные запятой.
    */
   String boxedPrimitiveTypes() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * Names of all numeric primitive types separated by the comma.
+   * Названия всех числовых и целочисленных примитивных типов, разделенные запятой.
    */
   String numericPrimitiveTypes() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * Names of all floating-point numeric primitive types separated by the comma.
+   * Названия всех вещественных примитивных типов, разделенные запятой.
    */
   String floatingPointNumericPrimitiveTypes() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * Name of the logical type.
+   * Название логического типа.
    */
   String logicalType() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * Name of the boxed logical type.
+   * Название запакованного логического типа.
    */
   String boxedLogicalType() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * What's the name of the type which represents nothing?
+   * Название типа, который не может хранить данные и обозначает, что метод ничего не возвращает.
    */
   String nothingType() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * What's the name of the boxed type which represents nothing?
+   * Название запакованного типа, который не может хранить данные и обозначает, что метод ничего не возвращает.
    */
   String boxedNothingType() {
     throw new TaskNotImplementedException();
