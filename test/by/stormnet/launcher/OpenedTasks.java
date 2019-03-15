@@ -23,6 +23,6 @@ public interface OpenedTasks {
       WhileLoopTaskTest.class,
       ArraysTaskTest.class
   ).collect(Collectors.toList());
-  
+
   List<String> packages = Collections.emptyList();
 }
