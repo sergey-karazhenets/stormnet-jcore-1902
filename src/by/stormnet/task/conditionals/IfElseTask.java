@@ -4,7 +4,7 @@ import by.stormnet.task.TaskNotImplementedException;
 
 class IfElseTask {
 
-  /**
+  /** 213242354
    * Используя блок if/else, напишите код, который вернет
    * значение 42, если результат умножения x на y больше 10.
    * Если результат умножения x на у меньше или равен 10,
