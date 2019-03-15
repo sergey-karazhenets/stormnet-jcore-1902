@@ -8,42 +8,63 @@ class ArraysTask {
    * Получить длину массива.
    */
   int arrayLength(int[] values) {
-    throw new TaskNotImplementedException();
+    return values.length;
   }
 
   /**
    * Получить первый элемент массива.
    */
   int firstElement(int[] values) {
-    throw new TaskNotImplementedException();
+    return values[0];
   }
 
   /**
    * Получить последний элемент массива.
    */
   int lastElement(int[] values) {
-    throw new TaskNotImplementedException();
+    int x;
+    x=values.length;
+    return values[x-1];
   }
 
   /**
    * Получить сумму 3 - 7 элементов массива.
    */
   int elementsSum(int[] values) {
-    throw new TaskNotImplementedException();
+    int x=0;
+    for(int i=0;i<values.length;i++){
+      if(i>=3&&i<=7){
+        x+=values[i];
+      }
+    }
+    return x;
   }
 
   /**
    * Получить новый массив, в котором будут 3, 5 - 7 элементы из исходного массива.
    */
   int[] selectElements(int[] values) {
-    throw new TaskNotImplementedException();
+    int[] arr=new int[4];
+    for(int i=0,k=0;i<values.length;i++){
+      if(i==3 || i>=5 && i<=7){
+        arr[k]=values[i];
+        k++;
+      }
+    }
+    return arr;
   }
 
   /**
    * Посчитать количество букв k в строке, используя цикл foreach.
    */
   int countOfLetterInString(String str) {
-    throw new TaskNotImplementedException();
+    int count=0;
+    for(char i: str.toCharArray()){
+      if(i=='k'){
+        count++;
+      }
+    }
+    return count;
   }
 
   /**
@@ -58,6 +79,15 @@ class ArraysTask {
    * Сумма полученных сумм со строк: 9 + 10 = 20
    */
   int rowsSum(int[][] matrix) {
-    throw new TaskNotImplementedException();
+    int sumstr=0;
+    int sumStrok=0;
+    for(int i=0;i<matrix.length;i++){
+      for(int j=0;j<matrix[i].length;j++){
+        sumstr+=matrix[i][j];
+      }
+      sumStrok+=sumstr;
+      sumstr=0;
+    }
+    return sumStrok;
   }
 }
