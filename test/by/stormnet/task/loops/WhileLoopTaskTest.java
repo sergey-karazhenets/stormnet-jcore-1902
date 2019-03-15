@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-class WhileLoopTaskTest {
+public class WhileLoopTaskTest {
 
   private final WhileLoopTask task = new WhileLoopTask();
 
