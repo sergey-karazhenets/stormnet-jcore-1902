@@ -5,28 +5,28 @@ import by.stormnet.task.TaskNotImplementedException;
 class ShortBasicsTask {
 
   /**
-   * How many bits in the memory is short occupy?
+   * Сколько бит в памяти занимает значение типа short?
    */
   int bitsInMemory() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * How many bytes in the memory is short occupy?
+   * Сколько байт в памяти занимает значение типа short?
    */
   int bytesInMemory() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * What is minimum value can hold short?
+   * Какое минимальное число можно присвоить переменной с типом short?
    */
   short minValue() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * What is maximum value can hold short?
+   * Какое максимальное число можно присвоить переменной с типом short?
    */
   short maxValue() {
     throw new TaskNotImplementedException();

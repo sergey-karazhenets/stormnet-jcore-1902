@@ -5,49 +5,49 @@ import by.stormnet.task.TaskNotImplementedException;
 class FloatBasicsTask {
 
   /**
-   * How many bits in the memory is float occupy?
+   * Сколько бит в памяти занимает значение типа float?
    */
   int bitsInMemory() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * How many bytes in the memory is float occupy?
+   * Сколько байт в памяти занимает значение типа float?
    */
   int bytesInMemory() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * What is minimum value can hold float?
+   * Какое минимальное число можно присвоить переменной с типом float?
    */
   float minValue() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * What is maximum value can hold float?
+   * Какое максимальное число можно присвоить переменной с типом float?
    */
   float maxValue() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * Return positive infinity represented by float number.
+   * Значение float, которое описывает положительную бесконечность.
    */
   float positiveInfinity() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * Return negative infinity represented by float number.
+   * Значение float, которое описывает отрицательную бесконечность.
    */
   float negativeInfinity() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * Return non a number (NaN) represented by float number.
+   * Значение float, которое описывает не число (NaN).
    */
   float nan() {
     throw new TaskNotImplementedException();
