@@ -1,1 +1,0 @@
---select-class=by.stormnet.VerifyLauncherTest
