@@ -5,49 +5,49 @@ import by.stormnet.task.TaskNotImplementedException;
 class DoubleBasicsTask {
 
   /**
-   * How many bits in the memory is double occupy?
+   * Сколько бит в памяти занимает значение типа double?
    */
   int bitsInMemory() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * How many bytes in the memory is double occupy?
+   * Сколько байт в памяти занимает значение типа double?
    */
   int bytesInMemory() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * What is minimum value can hold double?
+   * Какое минимальное число можно присвоить переменной с типом double?
    */
   double minValue() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * What is maximum value can hold double?
+   * Какое максимальное число можно присвоить переменной с типом double?
    */
   double maxValue() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * Return positive infinity represented by double number.
+   * Значение double, которое описывает положительную бесконечность.
    */
   double positiveInfinity() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * Return negative infinity represented by double number.
+   * Значение double, которое описывает отрицательную бесконечность.
    */
   double negativeInfinity() {
     throw new TaskNotImplementedException();
   }
 
   /**
-   * Return non a number (NaN) represented by double number.
+   * Значение double, которое описывает не число (NaN).
    */
   double nan() {
     throw new TaskNotImplementedException();
