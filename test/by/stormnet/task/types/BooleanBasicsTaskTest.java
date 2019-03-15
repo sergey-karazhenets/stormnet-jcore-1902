@@ -5,7 +5,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 import org.junit.jupiter.api.Test;
 
-class BooleanBasicsTaskTest {
+public class BooleanBasicsTaskTest {
 
   private final BooleanBasicsTask task = new BooleanBasicsTask();
 
