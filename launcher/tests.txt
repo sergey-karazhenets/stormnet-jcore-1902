@@ -1,1 +1,1 @@
---select-class=by.stormnet.VerifyLauncherTest
+--select-package=by.stormnet.task.types
