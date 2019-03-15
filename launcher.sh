@@ -2,11 +2,9 @@
 
 _SELF="${0##*/}"
 
-LAUNCHER_DIR="launcher"
-
 if [[ ! -d "src" && ! -d "test" ]]; then
   echo "error: You are executing the launcher script from wrong directory."
-  echo "Move to the root project directory and use the following command: ./${LAUNCHER_DIR}/${_SELF}"
+  echo "Move to the root project directory and use the following command: ./${_SELF}"
   exit 1
 fi
 
@@ -30,9 +28,5 @@ for sourceSet in src test; do
 done
 
 java \
-  -jar "${LIB_DIR}/junit-platform-console-standalone-1.4.0.jar" \
-  --class-path "${CLASSPATH}" \
-  --disable-banner \
-  --include-engine=junit-jupiter \
-  --exclude-engine=junit-vintage \
-  "@${LAUNCHER_DIR}/tests.txt"
+  -classpath "${CLASSPATH}" \
+  "by.stormnet.launcher.OpenedTasksLauncher"
