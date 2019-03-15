@@ -5,6 +5,6 @@ import java.util.List;
 
 public interface OpenedTasks {
 
-  List<Class> classes = Collections.singletonList(VerifyLauncherTest.class);
-  List<String> packages = Collections.emptyList();
+  List<Class> classes = Collections.emptyList();
+  List<String> packages = Collections.singletonList("by.stormnet.task.types");
 }
