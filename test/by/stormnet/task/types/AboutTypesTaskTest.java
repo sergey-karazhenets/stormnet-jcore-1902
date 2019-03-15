@@ -1,17 +1,17 @@
 package by.stormnet.task.types;
 
+import static by.stormnet.TestFunctions.splitByComma;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.Matchers.notNullValue;
-import static by.stormnet.TestFunctions.splitByComma;
 
 import java.util.List;
 import org.junit.jupiter.api.Test;
 
-class AboutTypesTaskTest {
+public class AboutTypesTaskTest {
 
   private final AboutTypesTask task = new AboutTypesTask();
 

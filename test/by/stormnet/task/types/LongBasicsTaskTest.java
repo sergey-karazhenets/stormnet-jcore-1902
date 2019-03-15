@@ -5,7 +5,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 import org.junit.jupiter.api.Test;
 
-class LongBasicsTaskTest {
+public class LongBasicsTaskTest {
 
   private final LongBasicsTask task = new LongBasicsTask();
 
