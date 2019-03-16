@@ -26,6 +26,7 @@ class DoWhileLoopTask {
    */
   int calculateSum(int x, int y) {
     int i=x;
+    int sum=0;
     do{
       if(x==y){
         return 0;
@@ -34,9 +35,10 @@ class DoWhileLoopTask {
       }else if(x>y){
         x--;
       }
+      sum+=x;
       i++;
     }while(i<y);
-    return i;
+    return sum;
   }
 
   /**
@@ -47,7 +49,19 @@ class DoWhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    throw new TaskNotImplementedException();
+    int sub=x;
+    int count=x;
+    do{
+      if(x<y){
+        x++;
+      }
+      if(x>y){
+        x--;
+      }
+      sub-=x;
+      count++;
+    }while (count<=y);
+    return sub;
   }
 
   /**
@@ -55,6 +69,12 @@ class DoWhileLoopTask {
    * произведение только четных чисел от 1 до 42 (не включительно).
    */
   long calculateEvenMultiply() {
-    throw new TaskNotImplementedException();
+    long i=1;
+    do{
+      if(i%2==0){
+        i*=i;
+      }
+    }while(i<42);
+    return i;
   }
 }
