@@ -21,8 +21,37 @@ class SwitchTask {
    * К примеру,
    *  -> operator = "-", тогда нужно посчитать разность между x и y
    *  -> operator = "%", тогда нужно посчитать остаток от деления x на y
+   *  123
    */
   float calculator(int x, int y, String operator) {
-    throw new TaskNotImplementedException();
+    float res = 0;
+    float x1=(float)x;
+    float y1=(float)y;
+    switch(operator){
+      case "+":
+        res=x1+y1;
+        break;
+      case "-":
+        res=x1-y1;
+        break;
+      case "*":
+        res=x1*y1;
+        break;
+      case "/":
+        res=x1/y1;
+        break;
+      case "%":
+        res=x1%y1;
+        break;
+      case "range_sum":
+        //if   (x1<y1){
+        for (;x1<y1;x1++){
+          res+=x1;
+        }
+        //}
+        break;
+      default:
+        res=x1*10;}
+    return res;
   }
 }
