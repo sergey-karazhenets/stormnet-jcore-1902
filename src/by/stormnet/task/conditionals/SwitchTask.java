@@ -38,17 +38,18 @@ class SwitchTask {
         res=x1*y1;
         break;
       case "/":
-        res=x1/y1;
+        if (y1!=0){
+        res=x1/y1;}
+        else res=Float.POSITIVE_INFINITY;
         break;
       case "%":
-        res=x1%y1;
+        if (y1!=0){res=x1%y1;}
+        else res=Float.POSITIVE_INFINITY;
         break;
       case "range_sum":
-        //if   (x1<y1){
         for (;x1<y1;x1++){
           res+=x1;
         }
-        //}
         break;
       default:
         res=x1*10;}
