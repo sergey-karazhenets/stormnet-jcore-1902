@@ -10,10 +10,12 @@ class DoWhileLoopTask {
    */
   int calculateSum() {
     int i=1;
+    int sum=0;
     do{
+      sum+=i;
       i++;
     }while(i<57);
-    return i;
+    return sum;
   }
 
   /**
@@ -25,19 +27,18 @@ class DoWhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSum(int x, int y) {
-    int i=x;
     int sum=0;
     do{
-      if(x==y){
-        return 0;
-      }else if(x<y){
+      sum+=x;
+      if(x<y){
         x++;
       }else if(x>y){
         x--;
+      }else if(x==y){
+        sum=0;
+        break;
       }
-      sum+=x;
-      i++;
-    }while(i<y);
+    }while(x!=y);
     return sum;
   }
 
@@ -49,18 +50,19 @@ class DoWhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    int sub=x;
-    int count=x;
+    int sub=0;
     do{
-      if(x<y){
+      if(x==y){
+        break;
+      }
+      if(x<0){
         x++;
       }
-      if(x>y){
+      sub-=x;
+      if(x>0){
         x--;
       }
-      sub-=x;
-      count++;
-    }while (count<=y);
+    }while(x!=y);
     return sub;
   }
 
@@ -70,11 +72,13 @@ class DoWhileLoopTask {
    */
   long calculateEvenMultiply() {
     long i=1;
+    long pr=1;
     do{
       if(i%2==0){
-        i*=i;
+        pr*=i;
       }
+      i++;
     }while(i<42);
-    return i;
+    return pr;
   }
 }
