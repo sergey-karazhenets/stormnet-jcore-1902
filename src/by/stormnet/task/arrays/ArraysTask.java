@@ -8,7 +8,7 @@ class ArraysTask {
    * Получить длину массива.
    */
   int arrayLength(int[] values) {
-    throw new TaskNotImplementedException();
+    return values.length;
   }
 
   /**
