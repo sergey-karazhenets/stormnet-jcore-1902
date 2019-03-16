@@ -9,7 +9,8 @@ class LogicalOperatorsTask {
    * and {@code b} is greater than 3.
    */
   boolean testAndOperator(int a, int b) {
-    throw new TaskNotImplementedException();
+    boolean c = (a != 0 && b > 3);
+    return c;
   }
 
   /**
@@ -17,7 +18,8 @@ class LogicalOperatorsTask {
    * or {@code b} is not equal to 3.
    */
   boolean testOrOperator(int a, int b) {
-    throw new TaskNotImplementedException();
+    boolean c = (a == 0 || b != 3);
+    return c;
   }
 
   /**
@@ -27,6 +29,7 @@ class LogicalOperatorsTask {
    * otherwise returns 0.
    */
   int testTernaryOperator(int value, int a, int b) {
-    throw new TaskNotImplementedException();
+    int c = (value >= 1 ? a + b : 0);
+    return c;
   }
 }
