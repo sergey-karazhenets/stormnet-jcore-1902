@@ -15,49 +15,76 @@ class ArraysTask {
    * Получить первый элемент массива.
    */
   int firstElement(int[] values) {
-    throw new TaskNotImplementedException();
+    return values[0];
   }
 
   /**
    * Получить последний элемент массива.
    */
   int lastElement(int[] values) {
-    throw new TaskNotImplementedException();
+    return values[values.length - 1];
   }
 
   /**
    * Получить сумму 3 - 7 элементов массива.
    */
   int elementsSum(int[] values) {
-    throw new TaskNotImplementedException();
+    int sum = 0;
+    for (int i = 3; i < 8; i++) {
+      sum = sum + values[i];
+    }
+    return sum;
   }
 
   /**
    * Получить новый массив, в котором будут 3, 5 - 7 элементы из исходного массива.
    */
   int[] selectElements(int[] values) {
-    throw new TaskNotImplementedException();
+    int[] array = new int[4];
+    int x = 0;
+    for (int i = 0; i < values.length; i++) {
+      if (i == 3 || i == 5 || i == 6 || i == 7) {
+        array[x] = values[i];
+        x++;
+      }
+    }
+    return array;
   }
 
   /**
    * Посчитать количество букв k в строке, используя цикл foreach.
    */
   int countOfLetterInString(String str) {
-    throw new TaskNotImplementedException();
+    int res = 0;
+    for (int i = 0; i < str.length(); i++) {
+      if (str.charAt(i) == 'k') {
+        res++;
+      }
+    }
+    return res;
   }
 
   /**
    * Посчитать сумму чисел в каждой строке матрицы,
    * затем вычислить сумму полученных сумм со строк.
    * К примеру,
-   *  1 3 5
-   *  2 4 5
-   *
+   * 1 3 5
+   * 2 4 5
+   * <p>
    * Сумма чисел первой строки: 1 + 3 + 5 = 9
    * Сумма чисел второй строки: 2 + 4 + 5 = 11
-   * Сумма полученных сумм со строк: 9 + 10 = 20
+   * Сумма полученных сумм со строк: 9 + 11 = 20
    */
   int rowsSum(int[][] matrix) {
-    throw new TaskNotImplementedException();
+    int sum = 0;
+    int sum1 = 0;
+    for (int i = 0; i < matrix.length; i++) {
+      for (int j = 0; j < matrix[i].length; j++) {
+        sum1 = sum1 + matrix[i][j];
+      }
+      sum+=sum1;
+      sum1=0;
+    }
+    return sum;
   }
 }
