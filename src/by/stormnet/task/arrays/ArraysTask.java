@@ -41,11 +41,12 @@ class ArraysTask {
    */
   int[] selectElements(int[] values) {
     int[] arr=new int[4];
-    for (int i=0;i<values.length;i++){
+    for (int i=0,j=1;i<values.length;i++){
       if (i==3){
         arr[0]=values[i];
       } else if (i>=5&i<=7){
-        arr[i-4]=values[i];
+        arr[j]=values[i];
+        j++;
       }
     }
     return arr;
