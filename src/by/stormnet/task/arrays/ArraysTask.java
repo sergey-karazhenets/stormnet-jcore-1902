@@ -8,28 +8,33 @@ class ArraysTask {
    * Получить длину массива.
    */
   int arrayLength(int[] values) {
-    throw new TaskNotImplementedException();
+    return values.length;
   }
 
   /**
    * Получить первый элемент массива.
    */
   int firstElement(int[] values) {
-    throw new TaskNotImplementedException();
+    return values[0];
   }
 
   /**
    * Получить последний элемент массива.
    */
   int lastElement(int[] values) {
-    throw new TaskNotImplementedException();
+    int length1 = values.length;
+    int result = --length1;
+    return values[result];
   }
 
   /**
    * Получить сумму 3 - 7 элементов массива.
    */
   int elementsSum(int[] values) {
-    throw new TaskNotImplementedException();
+    int a = values[2];
+    int b = values[6];
+    int sum = a + b;
+    return sum;
   }
 
   /**
