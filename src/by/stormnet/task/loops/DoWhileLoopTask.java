@@ -9,7 +9,13 @@ class DoWhileLoopTask {
    * сумму чисел от 1 до 57 (не включительно).
    */
   int calculateSum() {
-    throw new TaskNotImplementedException();
+    int result = 0;
+    int i = 1;
+    do {
+      result += i;
+      i++;
+    } while (i < 57);
+    return result;
   }
 
   /**
@@ -21,9 +27,25 @@ class DoWhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSum(int x, int y) {
-    throw new TaskNotImplementedException();
+    int result = 0;
+    if (x == y) {
+      System.out.println("x равно y!");
+      return result;
+    } else if (x < y) {
+      do {
+        result += x;
+        x++;
+      } while (x < y);
+      return result;
+    } else if (x > y) {
+      do {
+        result += x;
+        x--;
+      } while (x > y);
+      return result;
+    }
+    return result;
   }
-
   /**
    * Используя цикл do-while напишие код, который вернет
    * разность чисел от x до y (включительно).
@@ -32,7 +54,26 @@ class DoWhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    throw new TaskNotImplementedException();
+    int result = x;
+    if ( x < y) {
+      result += x;
+      do {
+        result -= x;
+        x++;
+      } while (x <= y);
+      return result;
+    } else if (x > y) {
+      result += x;
+      do {
+        result -= x;
+        x--;
+      } while (x >= y);
+      return result;
+    } else if (x == y) {
+      result -= y;
+      return result;
+    }
+    return result;
   }
 
   /**
