@@ -31,7 +31,7 @@ class ArraysTask {
    * Получить сумму 3 - 7 элементов массива.
    */
   int elementsSum(int[] values) {
-    int result = values[2] + values[3] + values[4] + values[5] + values[6];
+    int result = values[3] + values[4] + values[5] + values[6] + values[7];
     return result;
   }
 
