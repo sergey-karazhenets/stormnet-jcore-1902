@@ -54,7 +54,7 @@ class DoWhileLoopTask {
    */
   long calculateEvenMultiply() {
    int x=2;
-   int result=1;
+   long result=1;
    do {result*=x; x+=2;}
    while (x<42);
    return result;
