@@ -98,11 +98,13 @@ class ForLoopTask {
    * Суммируем результаты: 0 + 2 + 9 + ... + 9 + 18
    */
   int sumOfMultiplicationTable() {
-    int sum=0;
-    for (int x=1;x<=10;x++){
-        sum
-        for(int z=1;z<=10;z++){
-            sum=x*z;
+int sum=0;
+      for (int x=1;x<=10;x++){
+       for(int z=1;z<=10;z++){
+           if(x!=10){
+               if(z!=10){
+               sum+=z*x;}
+           }
              }
     }return sum;
   }
