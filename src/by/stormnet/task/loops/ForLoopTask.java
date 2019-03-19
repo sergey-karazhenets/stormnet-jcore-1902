@@ -50,15 +50,22 @@ class ForLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    int sub=0;
-    for(int i=x;i<y || i>y;){
-      sub-=i;
-      if(i<y){
-        i++;
-      }
-      if(i>y){
-        i--;
-      }
+    int sub=x;
+    if(x<y){
+        sub+=x;
+        for(int i=x;i<=y;){
+            sub-=i;
+            i++;
+        }
+    }else if(x>y){
+        sub+=x;
+        for(int i=x;i>=y;){
+            sub-=i;
+            i--;
+        }
+    }else if(x==y){
+        sub-=x;
+        return sub;
     }
     return sub;
   }
