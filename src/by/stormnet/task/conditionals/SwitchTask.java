@@ -23,6 +23,27 @@ class SwitchTask {
    *  -> operator = "%", тогда нужно посчитать остаток от деления x на y
    */
   float calculator(int x, int y, String operator) {
-    throw new TaskNotImplementedException();
+    float result = 0;
+     switch (operator) {
+      case "+":
+        return(float)x+y;
+       case "-":
+        return (float)x-y;
+      case "*":
+        return (float)x*y;
+      case "/":
+        return (float)x/y;
+      case "%":
+        return (float)x%y;
+      case "range_sum":
+        for (; x < y; x++) {
+          result +=(float) x;
+        }
+        break;
+      default:
+        result = x * 10;
+    }
+    return result;
   }
 }
+
