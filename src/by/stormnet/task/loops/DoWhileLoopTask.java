@@ -40,7 +40,7 @@ class DoWhileLoopTask {
          x--;
       }
     }
-    while (x<y || x>y);
+    while (x!=y);
     return res;
   }
 
@@ -52,19 +52,19 @@ class DoWhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    int res=0;
+    int res=x;
     do {
       if (x<y){
+          x++;
         res -=x;
-        x++;
-        break;
       }else if (x>y){
+          x--;
         res -=x;
-        x--;
-        break;
+      } else if (x==y) {
+          res -= x;
       }
     }
-    while (x<y||x>y);
+    while (x!=y);
     return res;
   }
 
