@@ -9,7 +9,11 @@ class ForLoopTask {
    * сумму чисел от 1 до 57 (не включительно).
    */
   int calculateSum() {
-    throw new TaskNotImplementedException();
+    int res = 0;
+    for (int a = 1; a < 57; a++) {
+      res += a;
+    }
+    return res;
   }
 
   /**
@@ -21,7 +25,19 @@ class ForLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSum(int x, int y) {
-    throw new TaskNotImplementedException();
+    int res = 0;
+    for (; x < y || x > y; ) {
+      if (x == y) {
+        res = 0;
+      } else if (x < y) {
+        res += x;
+        x++;
+      } else if (x > y) {
+        res += x;
+        x--;
+      }
+    }
+    return res;
   }
 
   /**
@@ -32,7 +48,28 @@ class ForLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    throw new TaskNotImplementedException();
+    int res = x;
+    for (; x <= y || x >= y; ) {
+      if (x < y) {
+        x++;
+        if (x == y) {
+          res -= x;
+          break;
+        }
+        res -= x;
+      } else if (x > y) {
+        x--;
+        if (x == y) {
+          res -= x;
+          break;
+        }
+        res -= x;
+      } else {
+        res -= x;
+        break;
+      }
+    }
+    return res;
   }
 
   /**
@@ -40,7 +77,14 @@ class ForLoopTask {
    * произведение только четных чисел от 1 до 42 (не включительно).
    */
   long calculateEvenMultiply() {
-    throw new TaskNotImplementedException();
+    long res = 1;
+    long a = 1;
+    for (; a < 42;a++) {
+      if (a % 2 == 0) {
+        res *= a;
+      }
+    }
+    return res;
   }
 
   /**
@@ -58,6 +102,12 @@ class ForLoopTask {
    * Суммируем результаты: 0 + 2 + 9 + ... + 9 + 18
    */
   int sumOfMultiplicationTable() {
-    throw new TaskNotImplementedException();
+    int res = 0;
+    for (int i = 0; i < 10; i++) {
+      for (int a = 0; a < 10; a++) {
+        res += i * a;
+      }
+    }
+    return res;
   }
 }
