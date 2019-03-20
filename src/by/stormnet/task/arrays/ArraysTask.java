@@ -8,35 +8,40 @@ class ArraysTask {
    * Получить длину массива.
    */
   int arrayLength(int[] values) {
-    throw new TaskNotImplementedException();
+    return values.length;
   }
 
   /**
    * Получить первый элемент массива.
    */
   int firstElement(int[] values) {
-    throw new TaskNotImplementedException();
+    return values[0];
   }
 
   /**
    * Получить последний элемент массива.
    */
   int lastElement(int[] values) {
-    throw new TaskNotImplementedException();
+    return values[values.length-1];
   }
 
   /**
    * Получить сумму 3 - 7 элементов массива.
    */
   int elementsSum(int[] values) {
-    throw new TaskNotImplementedException();
+    return values[3]+values[4]+values[5]+values[6]+values[7];
   }
 
   /**
    * Получить новый массив, в котором будут 3, 5 - 7 элементы из исходного массива.
    */
   int[] selectElements(int[] values) {
-    throw new TaskNotImplementedException();
+    int[] result = new int[4];
+     for (int i=3;i<8;i++){
+       if (i==3||i==5||i==6||i==7) {
+         result[i]=values[i];}
+     }
+     return result;
   }
 
   /**
