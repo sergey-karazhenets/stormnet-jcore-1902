@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.equalTo;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-class DivideOnZeroTaskTest {
+public class DivideOnZeroTaskTest {
 
   private final DivideOnZeroTask task = new DivideOnZeroTask();
 
