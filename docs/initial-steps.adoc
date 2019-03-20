@@ -1,0 +1,6 @@
+== Подготовка к работе
+
+. Установить JDK (https://www.oracle.com/technetwork/java/javase/downloads/index.html[скачать^]).
+. Установить Git (https://git-scm.com/download[скачать^]).
+. Установить IntelliJ Idea Community Edition (https://www.jetbrains.com/idea/download[скачать^]).
+. Создать аккаунт на Github (https://github.com/join[перейти^] на страницу для создания аккаунта).
