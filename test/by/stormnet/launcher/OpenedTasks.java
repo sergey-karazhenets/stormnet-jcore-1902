@@ -1,11 +1,13 @@
 package by.stormnet.launcher;
 
+import by.stormnet.task.arrays.ArraySortTaskTest;
 import by.stormnet.task.arrays.ArraysTaskTest;
 import by.stormnet.task.conditionals.IfElseTaskTest;
 import by.stormnet.task.conditionals.SwitchTaskTest;
 import by.stormnet.task.loops.DoWhileLoopTaskTest;
 import by.stormnet.task.loops.ForLoopTaskTest;
 import by.stormnet.task.loops.WhileLoopTaskTest;
+import by.stormnet.task.math.DivideOnZeroTaskTest;
 import by.stormnet.task.numsys.NumeralSystemsTaskTest;
 import java.util.Collections;
 import java.util.List;
@@ -21,7 +23,9 @@ public interface OpenedTasks {
       DoWhileLoopTaskTest.class,
       ForLoopTaskTest.class,
       WhileLoopTaskTest.class,
-      ArraysTaskTest.class
+      ArraysTaskTest.class,
+      ArraySortTaskTest.class,
+      DivideOnZeroTaskTest.class
   ).collect(Collectors.toList());
 
   List<String> packages = Collections.emptyList();
