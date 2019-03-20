@@ -437,6 +437,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Содержание</div>
 <ul class="sectlevel1">
 <li><a href="#_подготовка_к_работе">Подготовка к работе</a></li>
+<li><a href="#_получение_новых_заданий">Получение новых заданий</a>
+<ul class="sectlevel2">
+<li><a href="#_загрузка_заданий_с_github">Загрузка заданий с github</a></li>
+<li><a href="#_запуск_всех_открытых_заданий">Запуск всех открытых заданий</a></li>
+</ul>
+</li>
 <li><a href="#_отправка_выполненных_заданий_на_github">Отправка выполненных заданий на github</a></li>
 </ul>
 </div>
@@ -467,6 +473,146 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Создать аккаунт на Github (<a href="https://github.com/join" target="_blank" rel="noopener">перейти</a> на страницу для создания аккаунта).</p>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_получение_новых_заданий">Получение новых заданий</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_загрузка_заданий_с_github">Загрузка заданий с github</h3>
+<div class="paragraph">
+<p>Все новые (открытые) задания хранятся на github.
+Чтобы их получить себе в локальный репозиторий, нужно выполнить 2 шага:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Сохранить в локальном репозитории все изменения файлов:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>в Idea из строки меню выбрать <em>VCS &#8594; Commit&#8230;&#8203;</em></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/idea/vcs-commit.png" alt="vcs commit" width="200">
+</div>
+</div>
+</li>
+<li>
+<p>откроется окно</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/idea/commit-window.png" alt="commit window" width="400">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>в этом окне нужно:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>(1) отметить все сохраняемые файлы, если они еще не отмечены</p>
+</li>
+<li>
+<p>(2) написать краткое сообщение о том, какие изменения были сделаны</p>
+</li>
+<li>
+<p>(3) нажать кнопку <em>Commit</em></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Получить самые свежие изменения файлов с github:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>из строки меню выбрать <em>VCS &#8594; Update Project&#8230;&#8203;</em></p>
+<div class="imageblock">
+<div class="content">
+<img src="img/idea/vcs-update-project.png" alt="vcs update project" width="200">
+</div>
+</div>
+</li>
+<li>
+<p>откроется окно</p>
+<div class="imageblock">
+<div class="content">
+<img src="img/idea/update-project-window.png" alt="update project window" width="400">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>в этом окне:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>выбрать Update Type&#8201;&#8212;&#8201;<em>Rebase</em></p>
+</li>
+<li>
+<p>выбрать Clean working tree before update выбрать&#8201;&#8212;&#8201;<em>Using Stash</em></p>
+</li>
+<li>
+<p>нажать кнопку <em>OK</em></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_запуск_всех_открытых_заданий">Запуск всех открытых заданий</h3>
+<div class="paragraph">
+<p>После того, как новые задания будут успешно загружены в локальный
+репозиторий, нужно в Idea открыть файл <em>test/by/stormnet/launcher/OpenedTasksLauncher.java</em>.</p>
+</div>
+<div class="paragraph">
+<p>В этом файле написан код, который запустит все открытые задания
+(старые, которые уже ранее выполнялись, + новые задания):</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/idea/run-via-opened-tasks-launcher.png" alt="run via opened tasks launcher" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>Для запуска всех заданий нужно нажать на <em>зеленый</em> треугольник рядом с
+именем класса, затем в повившенся окошке нажать <em>Run</em>.</p>
+</div>
+<div class="paragraph">
+<p>Результат запуска будет отбражен в следующем виде:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/idea/opened-tasks-launch-output.png" alt="opened tasks launch output" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>Здесь, если результат выполнения задания <em>красный</em>, то оно сделано не
+верно или вообще еще не сделано (новое задание).
+Если результат отбражен <em>синим</em> цветом, то задание выполнено верно.</p>
+</div>
+<div class="paragraph">
+<p>Таким образом, список всех <em>красных</em> заданий это и есть все открытые
+задания, которые нужно делать. В этом списке могут быть как новые задания,
+так и старые задания, которые вы еще не успели доделать.</p>
+</div>
 </div>
 </div>
 </div>
@@ -601,7 +747,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-03-20 02:20:29 UTC
+Last updated 2019-03-20 22:17:00 UTC
 </div>
 </div>
 </body>
