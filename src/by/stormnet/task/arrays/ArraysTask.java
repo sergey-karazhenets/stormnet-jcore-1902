@@ -37,9 +37,11 @@ class ArraysTask {
    */
   int[] selectElements(int[] values) {
     int[] result = new int[4];
-     for (int i=3;i<8;i++){
+    int j=0;
+     for (int i=0;i<values.length;i++){
        if (i==3||i==5||i==6||i==7) {
-         result[i]=values[i];}
+         result[j]=values[i];
+         j++;}
      }
      return result;
   }
@@ -48,7 +50,12 @@ class ArraysTask {
    * Посчитать количество букв k в строке, используя цикл foreach.
    */
   int countOfLetterInString(String str) {
-    throw new TaskNotImplementedException();
+  //  char[] arr=str.toCharArray();
+    int result=0;
+    for (char i:str.toCharArray()/*int i=0;i<arr.length;i++*/) {
+      if (i=='k') {result++;}
+    }
+    return result;
   }
 
   /**
@@ -63,6 +70,11 @@ class ArraysTask {
    * Сумма полученных сумм со строк: 9 + 10 = 20
    */
   int rowsSum(int[][] matrix) {
-    throw new TaskNotImplementedException();
+    int result=0;
+    for (int i=0;i<matrix.length;i++){
+      for (int j=0;j<matrix[i].length;j++){
+        result+=matrix[i][j];
+      }
+    } return result;
   }
 }
