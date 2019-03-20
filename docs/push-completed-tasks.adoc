@@ -1,0 +1,41 @@
+== Отправка выполненных заданий на github
+
+:article-img-dir: img/idea
+
+Нужно выполнить 3 шага:
+
+. *Сохранить в локальном репозитории все изменения файлов:*
+  * в Idea из строки меню выбрать _VCS -> Commit..._
++
+image::{article-img-dir}/vcs-commit.png[width=200]
+
+  * откроется окно
++
+image::{article-img-dir}/commit-window.png[width=400]
+    ** в этом окне нужно:
+      *** (1) отметить все сохраняемые файлы, если они еще не отмечены
+      *** (2) написать краткое сообщение о том, какие изменения были сделаны
+      *** (3) нажать кнопку _Commit_
+// --------------------------------------------------------
+. *Получить самые свежие изменения файлов с github:*
+  * из строки меню выбрать _VCS -> Update Project..._
++
+image::{article-img-dir}/vcs-update-project.png[width=200]
+
+  * откроется окно
++
+image::{article-img-dir}/update-project-window.png[width=400]
+    ** в этом окне:
+      *** выбрать Update Type -- _Rebase_
+      *** выбрать Clean working tree before update выбрать -- _Using Stash_
+      *** нажать кнопку _OK_
+// --------------------------------------------------------
+. *Отправить на github все изменения файлов, сохраненные на 1-ом шаге:*
+  * из строки меню выбрать _VCS -> Git -> Push_
++
+image::{article-img-dir}/vcs-git-push.png[width=400]
+
+  * откроется окно
++
+image::{article-img-dir}/push-commits-window.png[width=400]
+  ** в этом окне нажать кнопку _Push_
