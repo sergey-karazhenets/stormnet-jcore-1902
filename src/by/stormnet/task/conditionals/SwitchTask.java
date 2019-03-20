@@ -40,11 +40,15 @@ class SwitchTask {
       case "/":
         if (y1!=0){
         res=x1/y1;}
-        else res=Float.POSITIVE_INFINITY;
+        else {if (x1>0) {res=Float.POSITIVE_INFINITY;}
+               else if (x1<0){res=Float.NEGATIVE_INFINITY;}
+              else res=Float.NaN;}
         break;
       case "%":
         if (y1!=0){res=x1%y1;}
-        else res=Float.POSITIVE_INFINITY;
+        else {if (x1>0) {res=Float.POSITIVE_INFINITY;}
+        else if (x1<0){res=Float.NEGATIVE_INFINITY;}
+        else res=Float.NaN;}
         break;
       case "range_sum":
         for (;x1<y1;x1++){
