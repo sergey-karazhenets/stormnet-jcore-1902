@@ -51,18 +51,7 @@ class WhileLoopTask {
    */
   int calculateSub(int x, int y) {
     int summ = x * 2;
-    if (x > y) {
-      while (x >= y) {
-        summ -= x;
-              }x++;
-    }
-    else if (x < y) {
-      while (x <= y) {
-        summ -= x;
-      }x--;
-    } else {
-      summ = 0;
-    }
+
     return summ;
   }
 
