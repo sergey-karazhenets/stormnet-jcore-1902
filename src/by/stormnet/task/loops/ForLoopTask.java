@@ -9,8 +9,16 @@ class ForLoopTask {
    * сумму чисел от 1 до 57 (не включительно).
    */
   int calculateSum() {
-    throw new TaskNotImplementedException();
-  }
+int sum = 0;
+    for (int i = 1; i < 57; i++) {
+      sum +=i;
+    }
+
+    return sum; }
+
+
+
+
 
   /**
    * Используя цикл for напишие код, который вернет
@@ -21,8 +29,29 @@ class ForLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSum(int x, int y) {
-    throw new TaskNotImplementedException();
+
+    int res = 0;
+
+
+      if (x == y) {
+        return 0;
+      }
+      if (x<y){
+        for(int i = x; i<y; i++ ){
+          res+=i;
+        }
+      } else if (x>y) {
+        for(int i = x; i>y; i--) {
+          res+=i;
+
+
+
+
+        }
+      }
+    return res;
   }
+
 
   /**
    * Используя цикл for напишие код, который вернет
@@ -32,20 +61,40 @@ class ForLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    throw new TaskNotImplementedException();
-  }
+
+    int res = 0;
+    if (x<y){
+    for (int i =x; i<=y; i++){
+      res-=i;
+    } if (x>y) {
+      for (int i = x; i>=y; i--) {
+        res-=i;
+      }
+      }
+
+    }return res;  }
 
   /**
    * Используя цикл for напишие код, который вернет
    * произведение только четных чисел от 1 до 42 (не включительно).
    */
   long calculateEvenMultiply() {
-    throw new TaskNotImplementedException();
+
+    long res = 1;
+    for (int i = 1; i<42; i++) {
+
+
+   if (i%2==0) {
+     res*=i;
+   }
+
+   }
+    return res;
   }
 
   /**
    * Используя цикл for напишие код, который будет считать
-   * всю таблицу умножения и суммировать результаты умножения.
+   * всю тaблицу умножения и суммировать результаты умножения.
    *
    * К примеру, считаем таблицу умножения:
    *  1 * 1 = 0
@@ -58,6 +107,22 @@ class ForLoopTask {
    * Суммируем результаты: 0 + 2 + 9 + ... + 9 + 18
    */
   int sumOfMultiplicationTable() {
-    throw new TaskNotImplementedException();
-  }
-}
+
+     int res = 1;
+     int sum = 0;
+    for (int i = 1; i <10; i++) {
+      for (int k = 1; k < 10; k++) {
+        res = i*k;
+        sum+=res;
+
+
+              }}
+
+
+  return sum;
+  } }
+
+
+
+
+

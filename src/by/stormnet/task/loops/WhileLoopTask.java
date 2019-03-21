@@ -9,7 +9,14 @@ class WhileLoopTask {
    * сумму чисел от 1 до 57 (не включительно).
    */
   int calculateSum() {
-    throw new TaskNotImplementedException();
+    int sum = 0;
+    int i = 1;
+    while (i<57) {
+      sum=sum+i;
+      i++;
+
+    }
+    return sum;
   }
 
   /**
@@ -21,7 +28,23 @@ class WhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSum(int x, int y) {
-    throw new TaskNotImplementedException();
+    int i = x;
+    int sum = 0;
+    if (x == y) {
+      return 0;
+    }
+    if (x < y) {
+      while (i<y) {
+        sum += i;
+        i++;
+      }
+    } else if (x > y) {
+        while (i > y) {
+          sum += i;
+          i--;
+        }
+      }
+    return sum;
   }
 
   /**
@@ -32,7 +55,22 @@ class WhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    throw new TaskNotImplementedException();
+    int sub = 0;
+    int i = x;
+    if (x<y) {
+      while (i<=y) {
+        sub-=i;
+        i++;
+
+  } }else if (x>y) {
+      while (y>=i) {
+        sub-=i;
+        i--;
+      }
+    }
+
+    return sub;
+
   }
 
   /**
@@ -40,6 +78,21 @@ class WhileLoopTask {
    * произведение только четных чисел от 1 до 42 (не включительно).
    */
   long calculateEvenMultiply() {
-    throw new TaskNotImplementedException();
+    int i = 1;
+    long sub = 1;
+    while (i < 42) {
+      if (i%2==0) {
+
+
+      sub = sub * i;
+
+
+
+    }
+      i++;
+
+
+
   }
-}
+    return sub;
+  } }

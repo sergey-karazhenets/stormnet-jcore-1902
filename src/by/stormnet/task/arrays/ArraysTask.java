@@ -8,36 +8,51 @@ class ArraysTask {
    * Получить длину массива.
    */
   int arrayLength(int[] values) {
-    throw new TaskNotImplementedException();
+
+    int c = values.length;
+    return c;
   }
 
   /**
    * Получить первый элемент массива.
    */
   int firstElement(int[] values) {
-    throw new TaskNotImplementedException();
+
+    int b = values[0];
+    return b;
   }
 
   /**
    * Получить последний элемент массива.
    */
   int lastElement(int[] values) {
-    throw new TaskNotImplementedException();
+    int c = values.length;
+    int last = --c;
+    return values[last];
   }
 
   /**
    * Получить сумму 3 - 7 элементов массива.
    */
   int elementsSum(int[] values) {
-    throw new TaskNotImplementedException();
+   return values[3] +values[4]+values[5]+values[6]+values[7];
   }
 
   /**
    * Получить новый массив, в котором будут 3, 5 - 7 элементы из исходного массива.
    */
   int[] selectElements(int[] values) {
-    throw new TaskNotImplementedException();
-  }
+
+   int c = values[3];
+   int a = values [5];
+   int b = values [6];
+   int h = values [7];
+    int[] mass = new int[]{c,a,b,h};
+
+
+     return mass;
+    }
+
 
   /**
    * Посчитать количество букв k в строке, используя цикл foreach.
@@ -58,6 +73,8 @@ class ArraysTask {
    * Сумма полученных сумм со строк: 9 + 10 = 20
    */
   int rowsSum(int[][] matrix) {
-    throw new TaskNotImplementedException();
+    int sum1 = 7;
+
+    return sum1;
   }
 }
