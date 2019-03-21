@@ -1,7 +1,5 @@
 package by.stormnet.task.conditionals;
-
 import by.stormnet.task.TaskNotImplementedException;
-
 class IfElseTask {
 
   /**
@@ -11,7 +9,11 @@ class IfElseTask {
    * то следует вернуть разность между x и y.
    */
   int ifElse(int x, int y) {
-    throw new TaskNotImplementedException();
+    if(x*y>10){
+      return 42;
+    } else {
+      return x-y;
+    }
   }
 
   /**
@@ -22,7 +24,16 @@ class IfElseTask {
    *   - на 4, если x больше либо равно 15 и y больше 15.
    */
   int ifElseIf(float x, float y) {
-    throw new TaskNotImplementedException();
+    if(x<10){
+      return (((int) x/ (int)y) * 2);
+    }
+    else if (x >= 10 && x < 15){
+      return (((int) x/ (int)y) * 3);
+    }
+    else if (x >= 15 && y > 15){
+      return (((int) x/(int)y) * 4);
+    }
+    return 0;
   }
 
   /**
@@ -33,6 +44,12 @@ class IfElseTask {
    * Если не выполняется ни одно из условий, то нужно вернуть исходное значение x.
    */
   int ifElseIfElse(int x) {
-    throw new TaskNotImplementedException();
+    if(x%2==0){
+      return x*2;
+    } else if(x%3==0){
+      return x*3;
+    } else {
+      return x;
+    }
   }
 }
