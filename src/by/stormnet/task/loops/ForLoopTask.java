@@ -26,18 +26,16 @@ class ForLoopTask {
    */
   int calculateSum(int x, int y) {
       int sum = 0;
-      for (int i = x; i != y; ) {
-          sum += i;
-          if (i < y) {
-              i++;
+      for (; x != y; ) {
+          sum += x;
+          if (x < y) {
+              x++;
           }
-          else if (i > y) {
-              i--;
-
+          else if (x > y) {
+              x--;
           }
          else if (x == y) {
               sum = 0;
-              break;
           }
       }
       return sum;
@@ -51,23 +49,20 @@ class ForLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-      int sum = 0;
-      for (;x>y||x<y;)
-      {
-          sum -= x;
-          if (x < y)
-          {
-              x++;
-              break;
+      int sum =x*2;
+      if (x < y) {
+          for (; x <= y; x++) {
+              sum -= x;
           }
-          if (x > y)
-          {
-              x--;
-              break;
+      } else if (x > y) {
+          for (; x >= y; x--) {
+              sum -= x;
           }
-      }
-      return sum;
-    }
+      } else {
+          return 0;
+      }return sum;
+  }
+
 
   /**
    * Используя цикл for напишие код, который вернет

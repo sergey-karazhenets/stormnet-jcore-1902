@@ -57,17 +57,17 @@ class DoWhileLoopTask {
         int summ = 0;
                 do {
                     if (x < y) {
-                            x++;
-                            summ-=x;
+                        summ-=x;
+                        x++;
                             break;
                         }
-                       else if (x > y) {
+                       if (x > y) {
                            summ-=x;
                            x--;
                            break;
                         }
-                       if (x>y||y>x){
-                           summ-=x;
+                       if (x==y){
+                           summ=0;
                        break;}
                 }while (x<=y);
         return summ;
