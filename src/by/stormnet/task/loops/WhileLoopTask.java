@@ -80,5 +80,6 @@ class WhileLoopTask {
       a++;
     }
     return res;
+
   }
 }
