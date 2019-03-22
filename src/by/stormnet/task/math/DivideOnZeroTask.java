@@ -17,7 +17,7 @@ class DivideOnZeroTask {
       return 1;
     }else if (x/y==Float.NEGATIVE_INFINITY){
       return -1;
-    }else if (x/y==Float.NaN){
+    }else if (Float.isNaN(x/y)){
       return 0;
     }else return x/y;
 
@@ -36,7 +36,7 @@ class DivideOnZeroTask {
       return 1;
     }else if (x/y==Double.NEGATIVE_INFINITY){
       return -1;
-    }else if (x/y==Double.NaN){
+    }else if (Double.isNaN(x/y)){
       return 0;
     }else return x/y;
   }
