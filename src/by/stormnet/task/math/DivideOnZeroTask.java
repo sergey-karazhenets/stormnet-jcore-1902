@@ -13,7 +13,7 @@ class DivideOnZeroTask {
    *  - иначе верните получившийся результат от деления.
    */
   float floatDivide(float x, float y) {
-        if (x/y==Float.POSITIVE_INFINITY){
+            if (x/y==Float.POSITIVE_INFINITY){
       return 1;
     }else if (x/y==Float.NEGATIVE_INFINITY){
       return -1;
