@@ -58,13 +58,25 @@ class ArraysTask {
    * Посчитать количество букв k в строке, используя цикл foreach.
    */
   int countOfLetterInString(String str) {
-    throw new TaskNotImplementedException();
-  }
+      char[] values = str.toCharArray();
 
-  /**
-   * Посчитать сумму чисел в каждой строке матрицы,
+int sum = 0;
+      for (int res : values) {
+          if (res == 'k') {
+              sum++;
+          }}
+          return sum;
+      }
+
+
+
+
+
+
+  /**Посчитать сумму чисел в каждой строке матрицы,
    * затем вычислить сумму полученных сумм со строк.
    * К примеру,
+   *
    *  1 3 5
    *  2 4 5
    *
@@ -73,8 +85,16 @@ class ArraysTask {
    * Сумма полученных сумм со строк: 9 + 10 = 20
    */
   int rowsSum(int[][] matrix) {
-    int sum1 = 7;
 
-    return sum1;
+
+    int sum = 0;
+    for (int i = 0; i<matrix.length; i++) {
+        for (int v =0; v<matrix[i].length; v++){
+            sum+=matrix[i][v];
+        }
+
+    }
+
+    return sum;
   }
 }

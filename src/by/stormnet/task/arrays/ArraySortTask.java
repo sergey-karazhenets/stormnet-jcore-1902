@@ -9,7 +9,23 @@ class ArraySortTask {
    * используя алгоритм сортировки пузырьком.
    */
   int[] bubbleSortAsc(int[] values) {
-    throw new TaskNotImplementedException();
+
+    boolean res = false;
+    int full;
+    for (int j = 0;j<values.length; j++) {
+      res = true;
+      for (int i = 0; i<values.length; i++) {
+        if (values [i]>values[i+1]) {
+                res = false;
+                full = values[i];
+                values[i] = values[i+1];
+                values [i+1] = full;
+        }
+
+      }
+
+    }
+    return values;
   }
 
   /**

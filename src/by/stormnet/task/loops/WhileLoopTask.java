@@ -58,14 +58,18 @@ class WhileLoopTask {
     int sub = 0;
     int i = x;
     if (x<y) {
+
       while (i<=y) {
         sub-=i;
         i++;
 
-  } }else if (x>y) {
-      while (y>=i) {
-        sub-=i;
-        i--;
+
+  } }
+
+    else if (x>y) {
+      while (i>=y) {
+        sub=i;
+        --i;
       }
     }
 

@@ -66,8 +66,8 @@ int sum = 0;
     if (x<y){
     for (int i =x; i<=y; i++){
       res-=i;
-    } if (x>y) {
-      for (int i = x; i>=y; i--) {
+    } if (x<y) {
+      for (int i = x; i<=y; i--) {
         res-=i;
       }
       }
