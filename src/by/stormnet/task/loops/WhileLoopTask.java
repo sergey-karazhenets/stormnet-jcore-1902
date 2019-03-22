@@ -9,7 +9,14 @@ class WhileLoopTask {
    * сумму чисел от 1 до 57 (не включительно).
    */
   int calculateSum() {
-    throw new TaskNotImplementedException();
+    int result = 0;
+    int i = 1;
+    while (i < 57) {
+      result += i;
+      System.out.println("Результат равено: " + result);
+      i++;
+    } System.out.println("Итоговый результат: " + result);
+    return result;
   }
 
   /**

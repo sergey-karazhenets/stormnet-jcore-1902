@@ -9,7 +9,12 @@ class ForLoopTask {
    * сумму чисел от 1 до 57 (не включительно).
    */
   int calculateSum() {
-    throw new TaskNotImplementedException();
+    int result = 0;
+    for (int i = 1; i < 57; i++) {
+      result += i;
+    }
+    System.out.println(result);
+    return result;
   }
 
   /**
@@ -21,7 +26,24 @@ class ForLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSum(int x, int y) {
-    throw new TaskNotImplementedException();
+    int result = 0;
+    if (x == y) {
+      System.out.println("x = y => возвращаем 0!");
+      return 0;
+    } else if (x < y) {
+      for (int i = x; i < y; i++) {
+        result += i;
+        System.out.println("Результат равен: " + result);
+      }return result;
+    } else if (x > y) {
+      for (int i = x; i > y; i--) {
+        result += i;
+        System.out.println("Результат равен: " + result);
+      } return result;
+    } else {
+      System.out.println();
+    }
+    return result;
   }
 
   /**

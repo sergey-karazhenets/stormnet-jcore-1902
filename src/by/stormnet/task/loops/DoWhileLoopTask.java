@@ -81,6 +81,18 @@ class DoWhileLoopTask {
    * произведение только четных чисел от 1 до 42 (не включительно).
    */
   long calculateEvenMultiply() {
-    throw new TaskNotImplementedException();
+   long result = 1;
+   long numbs = 1;
+   do {
+     if (numbs % 2 == 0) {
+       result *= numbs;
+       numbs++;
+     } else {
+       System.out.println(numbs + " Нечёнтное число!");
+       numbs++;
+     }
+   } while (numbs < 42);
+   System.out.println("Произведение чётных чисел от 1 до 42 ( не включительно): " + result);
+    return result;
   }
 }

@@ -39,14 +39,28 @@ class ArraysTask {
    * Получить новый массив, в котором будут 3, 5 - 7 элементы из исходного массива.
    */
   int[] selectElements(int[] values) {
-    throw new TaskNotImplementedException();
+    int[] result;
+    result = new int[] {
+            values[3], values[5], values[6], values[7]
+    };
+    return result;
   }
 
   /**
    * Посчитать количество букв k в строке, используя цикл foreach.
    */
   int countOfLetterInString(String str) {
-    throw new TaskNotImplementedException();
+    int result = 0;
+    char[] arr = str.toCharArray();
+    for (int i: arr
+         ) {
+      if ( i == 'k' ) {
+      result++;
+    } else {
+      System.out.println();
+      }
+    }
+    return result;
   }
 
   /**
@@ -61,6 +75,13 @@ class ArraysTask {
    * Сумма полученных сумм со строк: 9 + 10 = 20
    */
   int rowsSum(int[][] matrix) {
-    throw new TaskNotImplementedException();
+    int a = matrix.length;
+    int sum = 0;
+    for (int i = 0; i < a; i++) {
+      for (int j = 0; j <= a; j++) {
+        sum += matrix[i][j];
+      }
+    }
+    return sum;
   }
 }
