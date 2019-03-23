@@ -54,23 +54,20 @@ class DoWhileLoopTask {
      * - если x больше y, то значения x будут убывать на каждой итерации
      */
     int calculateSub(int x, int y) {
-        int summ = 0;
-                do {
-                    if (x < y) {
-                        summ-=x;
-                        x++;
-                            break;
-                        }
-                       if (x > y) {
-                           summ-=x;
-                           x--;
-                           break;
-                        }
-                       if (x==y){
-                           summ=0;
-                       break;}
-                }while (x<=y);
-        return summ;
+        int sum =x*2;
+        if (x < y) {
+            do {
+                sum -= x;
+                x++;
+            }while (x<=y);
+        } else if (x > y) {
+            do {
+                sum -= x;
+                x--;
+            }while (x>=y);
+        } else {
+            return 0;
+        }return sum;
         }
 
 
