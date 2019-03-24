@@ -2,49 +2,67 @@ package by.stormnet.task.arrays;
 
 import by.stormnet.task.TaskNotImplementedException;
 
+import javax.swing.text.JTextComponent;
+import java.util.FormatFlagsConversionMismatchException;
+
 class ArraysTask {
 
   /**
    * Получить длину массива.
    */
-  int arrayLength(int[] values) {
-    throw new TaskNotImplementedException();
+  int arrayLength(int[] values) { return values.length;
   }
 
   /**
    * Получить первый элемент массива.
    */
   int firstElement(int[] values) {
-    throw new TaskNotImplementedException();
+    return values[0];
   }
 
   /**
    * Получить последний элемент массива.
    */
   int lastElement(int[] values) {
-    throw new TaskNotImplementedException();
+    int length1= values.length;
+    int result=--length1;
+    return values[result];
   }
 
   /**
    * Получить сумму 3 - 7 элементов массива.
    */
   int elementsSum(int[] values) {
-    throw new TaskNotImplementedException();
+    int result= values[3]+values[4]+values[5]+values[6]+values[7];
+    return result;
   }
 
   /**
    * Получить новый массив, в котором будут 3, 5 - 7 элементы из исходного массива.
    */
   int[] selectElements(int[] values) {
-    throw new TaskNotImplementedException();
+    int[] res = new int [4];
+    res[0] = values[3];
+    for (int m = 5, i = 1; m <= 7; m++, i++) {
+     res[i] = values[m];
+    }
+    return res;
   }
 
   /**
    * Посчитать количество букв k в строке, используя цикл foreach.
    */
-  int countOfLetterInString(String str) {
-    throw new TaskNotImplementedException();
+  int countOfLetterInString(String str) { ;
+    int count = 0;
+    for (char a : str.toCharArray()) {
+      if (a == 'k') {
+        count++;
+      }
+    }
+    return count;
   }
+
+
 
   /**
    * Посчитать сумму чисел в каждой строке матрицы,
@@ -58,6 +76,12 @@ class ArraysTask {
    * Сумма полученных сумм со строк: 9 + 10 = 20
    */
   int rowsSum(int[][] matrix) {
-    throw new TaskNotImplementedException();
+    int sum=0;
+    for (int i = 0;i < matrix.length; i++) {
+      for (int j=0;j < matrix[i].length; j++) {
+        sum+= matrix[i][j];
+    }
   }
+  return sum;
+}
 }

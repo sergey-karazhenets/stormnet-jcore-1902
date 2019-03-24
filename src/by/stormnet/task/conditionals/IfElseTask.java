@@ -11,28 +11,49 @@ class IfElseTask {
    * то следует вернуть разность между x и y.
    */
   int ifElse(int x, int y) {
-    throw new TaskNotImplementedException();
+    int result = x * y;
+    int returnValue = 0;
+    if (result > 10) {
+      returnValue = 42;
+    } else {
+      returnValue = x - y;
+    }
+    return returnValue;
   }
 
   /**
    * Используя блок if/else if, напишите код, который вернет целую часть
    * от результата деления x на y умноженную:
-   *   - на 2, если x меньше 10;
-   *   - на 3, если x больше либо равно 10 и x меньше 15;
-   *   - на 4, если x больше либо равно 15 и y больше 15.
+   * - на 2, если x меньше 10;
+   * - на 3, если x больше либо равно 10 и x меньше 15;
+   * - на 4, если x больше либо равно 15 и y больше 15.
    */
   int ifElseIf(float x, float y) {
-    throw new TaskNotImplementedException();
+    if (x < 10) {
+      return(int) (x/y) * 2;
+    } else if (x >= 10 && x < 15) {
+      return(int)(x/y) * 3;
+    } else if (x >= 15 && y > 15) {
+      return (int)(x/y)* 4;
+    }
+    return (int) x;
   }
+
 
   /**
    * Используя блок if/else if/else, напишите код, который вернет
    * x умноженный:
-   *   - на 2, если x четное число;
-   *   - на 3, если x без остатка делится на 3.
+   * - на 2, если x четное число;
+   * - на 3, если x без остатка делится на 3.
    * Если не выполняется ни одно из условий, то нужно вернуть исходное значение x.
    */
   int ifElseIfElse(int x) {
-    throw new TaskNotImplementedException();
+    int returnValue = x;
+    if (x % 2 == 0) {
+      returnValue *= 2;
+    } else if (x % 3 == 0) {
+      returnValue *= 3;
+    } else returnValue = x;
+    return returnValue;
   }
 }
