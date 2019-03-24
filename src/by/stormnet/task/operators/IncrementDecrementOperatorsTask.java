@@ -8,27 +8,27 @@ class IncrementDecrementOperatorsTask {
    * Increment value using prefix form.
    */
   int incrementPrefixForm(int val) {
-    throw new TaskNotImplementedException();
+    return ++val;
   }
 
   /**
    * Increment value using postfix form.
    */
   int incrementPostfixForm(int val) {
-    throw new TaskNotImplementedException();
+    return val++;
   }
 
   /**
    * Decrement value using prefix form.
    */
   int decrementPrefixForm(int val) {
-    throw new TaskNotImplementedException();
+    return --val;
   }
 
   /**
    * Decrement value using postfix form.
    */
   int decrementPostfixForm(int val) {
-    throw new TaskNotImplementedException();
+    return val--;
   }
 }

@@ -8,105 +8,105 @@ class ArithmeticOperatorsTask {
    * Арифметические операторы, разделенные запятой.
    */
   String operators() {
-    throw new TaskNotImplementedException();
+    return "+" + ",-" + ",/" + ",*" + ",%";
   }
 
   /**
    * Сокрщенные формы арифметические операторы, разделенные запятой.
    */
   String operatorsShortForm() {
-    throw new TaskNotImplementedException();
+    return "+=,-=,/=,*=,%=";
   }
 
   /**
    * Сделайте суммирование двух чисел.
    */
   int plus(int a, int b) {
-    throw new TaskNotImplementedException();
+    return a + b;
   }
 
   /**
    * Сделайте суммирование трех чисел.
    */
   int plus(int a, int b, int c) {
-    throw new TaskNotImplementedException();
+    return a + b + c;
   }
 
   /**
    * Сделайте суммирование двух чисел, используя сокрщенную форму оператора суммы.
    */
   int plusShortForm(int a, int b) {
-    throw new TaskNotImplementedException();
+    return a += b;
   }
 
   /**
    * Сделайте вычитание двух чисел.
    */
   int minus(int a, int b) {
-    throw new TaskNotImplementedException();
+    return a - b;
   }
 
   /**
    * Сделайте вычитание трех чисел.
    */
   int minus(int a, int b, int c) {
-    throw new TaskNotImplementedException();
+    return a - b - c;
   }
 
   /**
    * Сделайте вычитание двух чисел, используя сокрщенную форму оператора вычитания.
    */
   int minusShortForm(int a, int b) {
-    throw new TaskNotImplementedException();
+    return a -= b;
   }
 
   /**
    * Сделайте умножение двух чисел.
    */
   int multiply(int a, int b) {
-    throw new TaskNotImplementedException();
+    return a * b;
   }
 
   /**
    * Сделайте умножение трех чисел.
    */
   int multiply(int a, int b, int c) {
-    throw new TaskNotImplementedException();
+    return  a * b * c;
   }
 
   /**
    * Сделайте вычитание двух чисел, используя сокрщенную форму оператора умножения.
    */
   int multiplyShortForm(int a, int b) {
-    throw new TaskNotImplementedException();
+    return a *= b;
   }
 
   /**
    * Сделайте деление двух чисел.
    */
   int divide(int a, int b) {
-    throw new TaskNotImplementedException();
+    return a / b;
   }
 
   /**
    * Сделайте деление трех чисел.
    */
   int divide(int a, int b, int c) {
-    throw new TaskNotImplementedException();
+    return a / b / c;
   }
 
   /**
    * Сделайте вычитание двух чисел, используя сокрщенную форму оператора деления.
    */
   int divideShortForm(int a, int b) {
-    throw new TaskNotImplementedException();
+    return a /= b;
   }
 
   /**
    * Вычислите остаток от деления числа a на b.
    */
   int modulus(int a, int b) {
-    throw new TaskNotImplementedException();
+    return a % b;
   }
 
   /**
@@ -114,6 +114,6 @@ class ArithmeticOperatorsTask {
    * который позволяет получить остаток от деления двух чисел.
    */
   int modulusShortForm(int a, int b) {
-    throw new TaskNotImplementedException();
+    return a %= b;
   }
 }
