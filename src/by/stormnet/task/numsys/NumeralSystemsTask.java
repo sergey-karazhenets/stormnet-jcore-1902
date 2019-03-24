@@ -120,62 +120,62 @@ class NumeralSystemsTask {
    * Как будет выглядеть число 15 в шестнадцатиричной системе счисления?
    */
   String hexadecimalSystem15() {
-    throw new TaskNotImplementedException();
+    return "F";
   }
 
   /**
    * Как будет выглядеть число 16 в шестнадцатиричной системе счисления?
    */
   String hexadecimalSystem16() {
-    throw new TaskNotImplementedException();
+    return "10";
   }
 
   /**
    * Как будет выглядеть число 434 в десятеричной системе счисления?
    */
   String decimalSystem434() {
-    throw new TaskNotImplementedException();
+    return "434";
   }
 
   /**
    * Как будет выглядеть число 434 в двоичной системе счисления?
    */
   String binarySystem434() {
-    throw new TaskNotImplementedException();
+    return "110110010";
   }
 
   /**
    * Как будет выглядеть число 434 в восьмеричной системе счисления?
    */
   String octalSystem434() {
-    throw new TaskNotImplementedException();
+    return "662";
   }
 
   /**
    * Как будет выглядеть число 434 в шестнадцатиричной системе счисления?
    */
   String hexadecimalSystem434() {
-    throw new TaskNotImplementedException();
+    return "1B2";
   }
 
   /**
    * Как будет выглядеть двоичное число 10011101 в десятеричной системе счисления?
    */
   int binaryToDecimal() {
-    throw new TaskNotImplementedException();
+  return 157;
   }
 
   /**
    * Как будет выглядеть восьмеричное число 4371 в десятеричной системе счисления?
    */
   int octalToDecimal() {
-    throw new TaskNotImplementedException();
+    return 2297;
   }
 
   /**
    * Как будет выглядеть шестнадцатиричное число 7FE3B в десятеричной системе счисления?
    */
   int hexToDecimal() {
-    throw new TaskNotImplementedException();
+    return 523835;
   }
 }

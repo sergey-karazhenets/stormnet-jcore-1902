@@ -66,6 +66,6 @@ class IfElseTask {
       return res1;
     }
     if (x % 2 != 0 & x % 3 != 0){
-      return x;}
+      return value;}
       return value;}
 }
