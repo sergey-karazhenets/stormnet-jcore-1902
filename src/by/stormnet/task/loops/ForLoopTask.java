@@ -54,7 +54,19 @@ class ForLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    throw new TaskNotImplementedException();
+    int result = x * 2;
+    if (x < y) {
+      for (; x <= y; x++) {
+        result -= x;
+      } return result;
+    } else if (x > y) {
+      for (; x >= y; x--) {
+        result -= x;
+      } return result;
+    } else {
+      return x - y;
+    }
+
   }
 
   /**
@@ -62,7 +74,16 @@ class ForLoopTask {
    * произведение только четных чисел от 1 до 42 (не включительно).
    */
   long calculateEvenMultiply() {
-    throw new TaskNotImplementedException();
+    long result = 1;
+    for (long i = 1; i < 42; i++) {
+        if (i % 2 == 0) {
+          result *= i;
+        } else {
+          System.out.println("Нечётное число: " + i);
+        }
+      }
+    System.out.println(result);
+    return result;
   }
 
   /**
@@ -80,6 +101,13 @@ class ForLoopTask {
    * Суммируем результаты: 0 + 2 + 9 + ... + 9 + 18
    */
   int sumOfMultiplicationTable() {
-    throw new TaskNotImplementedException();
+    int sum = 0;
+    for (int a = 0; a <= 9; a++) {
+      for (int b = 0; b <= 9; b++) {
+        int proizv = a*b;
+        sum += proizv;
+      }
+    } System.out.println(sum);
+    return sum;
   }
 }

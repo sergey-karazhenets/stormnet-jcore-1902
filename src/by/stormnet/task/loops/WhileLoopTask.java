@@ -15,7 +15,8 @@ class WhileLoopTask {
       result += i;
       System.out.println("Результат равено: " + result);
       i++;
-    } System.out.println("Итоговый результат: " + result);
+    }
+    System.out.println("Итоговый результат: " + result);
     return result;
   }
 
@@ -23,23 +24,54 @@ class WhileLoopTask {
    * Используя цикл while напишие код, который вернет
    * сумму чисел от x до y (не включительно).
    * Учитывайте, что:
-   *  - если x равно y, то нужно вернуть 0
-   *  - если x меньше y, то значения x будут возрастать на каждой итерации
-   *  - если x больше y, то значения x будут убывать на каждой итерации
+   * - если x равно y, то нужно вернуть 0
+   * - если x меньше y, то значения x будут возрастать на каждой итерации
+   * - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSum(int x, int y) {
-    throw new TaskNotImplementedException();
+    int sum = 0;
+    if (x < y) {
+      while (x < y) {
+        sum += x;
+        x++;
+      }
+      return sum;
+    } else if (x > y) {
+      while (x > y) {
+        sum += x;
+        x--;
+      }
+      return sum;
+    } else {
+      return sum;
+    }
   }
 
   /**
    * Используя цикл while напишие код, который вернет
    * разность чисел от x до y (включительно).
    * Учитывайте, что:
-   *  - если x меньше y, то значения x будут возрастать на каждой итерации
-   *  - если x больше y, то значения x будут убывать на каждой итерации
+   * - если x меньше y, то значения x будут возрастать на каждой итерации
+   * - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    throw new TaskNotImplementedException();
+    int result = x * 2;
+    if (x < y) {
+      while (x <= y) {
+        result -= x;
+        x++;
+      }
+      return result;
+    } else if (x > y) {
+      while (x >= y) {
+        result -= x;
+        x--;
+      }
+      return result;
+    } else {
+      return x - y;
+    }
+
   }
 
   /**
@@ -47,6 +79,17 @@ class WhileLoopTask {
    * произведение только четных чисел от 1 до 42 (не включительно).
    */
   long calculateEvenMultiply() {
-    throw new TaskNotImplementedException();
+    long i = 1;
+    long result = 1;
+    while (i < 42) {
+      if (i % 2 == 0 && i > 1) {
+        result *= i;
+        i++;
+      } else {
+        i++;
+      }
+    }
+    System.out.println(result);
+    return result;
   }
 }

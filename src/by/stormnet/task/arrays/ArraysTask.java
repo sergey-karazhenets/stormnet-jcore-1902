@@ -75,13 +75,19 @@ class ArraysTask {
    * Сумма полученных сумм со строк: 9 + 10 = 20
    */
   int rowsSum(int[][] matrix) {
-    int a = matrix.length;
     int sum = 0;
-    for (int i = 0; i < a; i++) {
-      for (int j = 0; j <= a; j++) {
-        sum += matrix[i][j];
-      }
-    }
-    return sum;
+   int a = matrix.length;
+   for (int i = 0; i < a; i++) {
+     int b = matrix[i].length;
+     for (int j = 0; j < b; j++) {
+       int sumStroka = 0;
+       if (j < b) {
+         sumStroka += matrix[i][j];
+         sum += sumStroka;
+       }
+     }
+   }
+   System.out.println("Сумма строк: " + sum);
+   return sum;
   }
 }
