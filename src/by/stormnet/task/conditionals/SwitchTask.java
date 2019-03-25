@@ -37,8 +37,7 @@ class SwitchTask {
         return (float)x%y;
       case "range_sum":
         for (; x < y; x++) {
-          result +=(float) x;
-        }
+          result +=(float) x;}
         break;
       default:
         result = x * 10;
