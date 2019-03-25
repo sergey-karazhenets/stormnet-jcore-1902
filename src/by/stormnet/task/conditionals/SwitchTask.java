@@ -26,19 +26,27 @@ class SwitchTask {
     float result = 0;
      switch (operator) {
       case "+":
-        return(float)x+y;
+        result=(float)x+y;
+        break;
        case "-":
-        return (float)x-y;
+        result= (float)x-y;
+        break;
       case "*":
-        return (float)x*y;
+        result= (float)x*y;
+        break;
       case "/":
-        return (float)x/y;
+          if (y!=0){result=(float)x/y;}
+        else{ if (x>0){result=Float.POSITIVE_INFINITY;}
+        else if (x<0){result=Float.NEGATIVE_INFINITY;}
+        else  {result=Float.NaN;}}
+        break;
       case "%":
-        return (float)x%y;
+        result= (float)x%y;
+        break;
       case "range_sum":
         for (; x < y; x++) {
           result +=(float) x;}
-        break;
+                 break;
       default:
         result = x * 10;
     }
