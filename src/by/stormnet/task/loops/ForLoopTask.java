@@ -61,18 +61,24 @@ int sum = 0;
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-
-    int res = 0;
-    if (x<y){
-    for (int i =x; i<=y; i++){
-      res-=i;
-    } if (x<y) {
-      for (int i = x; i<=y; i--) {
-        res-=i;
+    int res = x;
+    if (x == y) {
+      res= x-y;
+    } else if (x < y) {
+      ++x;
+      for (; x <= y; x++) {
+        res -= x;
       }
+    } else {
+      --x;
+      for (; x >= y; x--) {
+        res -= x;
       }
+    }
+    return res;
+  }
 
-    }return res;  }
+
 
   /**
    * Используя цикл for напишие код, который вернет

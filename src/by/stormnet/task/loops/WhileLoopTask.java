@@ -55,22 +55,25 @@ class WhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    int sub = 0;
-    int i = x;
-    if (x<y) {
+    int sub = x;
 
-      while (i<=y) {
-        sub-=i;
-        i++;
+    if (x<y) {
+      sub += x;
+      while (x<=y) {
+        sub-=x;
+        x++;
 
 
   } }
 
     else if (x>y) {
-      while (i>=y) {
-        sub=i;
-        --i;
+      sub += x;
+      while (x>=y) {
+        sub-=x;
+        --x;
       }
+    } else {
+      sub = x - y;
     }
 
     return sub;

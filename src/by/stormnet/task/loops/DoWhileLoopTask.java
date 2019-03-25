@@ -62,8 +62,30 @@ class DoWhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    throw new TaskNotImplementedException();
-  }
+    int sub = x*2;
+    if (x < y) {
+      do {
+        sub -= x;
+
+          x++;
+        }
+        while (x <= y);
+    }
+
+        else if (x > y) {
+
+          do {
+              sub -= x;
+              --x;
+          }
+          while (x >= y);
+        }
+    else return x - y;
+      return sub;
+      }
+
+
+
 
   /**
    * Используя цикл do-while напишие код, который вернет
@@ -73,10 +95,12 @@ class DoWhileLoopTask {
     int i = 1;
     long sum = 1;
 
-      do { if (i % 2 == 0) {
+      do {
+        if (i % 2 == 0) {
 
 
-        sum *= i;}
+        sum *= i;
+        }
         i++;
 
       } while(i < 42);
