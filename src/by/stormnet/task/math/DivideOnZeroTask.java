@@ -13,7 +13,17 @@ class DivideOnZeroTask {
    *  - иначе верните получившийся результат от деления.
    */
   float floatDivide(float x, float y) {
-    throw new TaskNotImplementedException();
+    float div = x / y;
+    if (div == Float.POSITIVE_INFINITY) {
+      return 1;
+    } else if (div == Float.NEGATIVE_INFINITY) {
+      return -1;
+    } else if (Float.isNaN(div)) {
+      return 0;
+    }
+    else{
+      return x/y;
+    }
   }
 
   /**
@@ -25,6 +35,16 @@ class DivideOnZeroTask {
    *  - иначе верните получившийся результат от деления.
    */
   double doubleDivide(double x, double y) {
-    throw new TaskNotImplementedException();
+    double div = x / y;
+    if (div == Double.POSITIVE_INFINITY) {
+      return 1;
+    } else if (div == Double.NEGATIVE_INFINITY) {
+      return -1;
+    } else if (Double.isNaN(div)) {
+      return 0;
+    }
+    else{
+      return x/y;
+    }
   }
 }
