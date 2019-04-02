@@ -8,48 +8,48 @@ class DoubleBasicsTask {
    * Сколько бит в памяти занимает значение типа double?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 64;
   }
 
   /**
    * Сколько байт в памяти занимает значение типа double?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 8;
   }
 
   /**
    * Какое минимальное число можно присвоить переменной с типом double?
    */
   double minValue() {
-    throw new TaskNotImplementedException();
+    return Double.MIN_VALUE;
   }
 
   /**
    * Какое максимальное число можно присвоить переменной с типом double?
    */
   double maxValue() {
-    throw new TaskNotImplementedException();
+    return Double.MAX_VALUE;
   }
 
   /**
    * Значение double, которое описывает положительную бесконечность.
    */
   double positiveInfinity() {
-    throw new TaskNotImplementedException();
+    return Double.POSITIVE_INFINITY;
   }
 
   /**
    * Значение double, которое описывает отрицательную бесконечность.
    */
   double negativeInfinity() {
-    throw new TaskNotImplementedException();
+    return Double.NEGATIVE_INFINITY;
   }
 
   /**
    * Значение double, которое описывает не число (NaN).
    */
   double nan() {
-    throw new TaskNotImplementedException();
+    return Double.NaN;
   }
 }

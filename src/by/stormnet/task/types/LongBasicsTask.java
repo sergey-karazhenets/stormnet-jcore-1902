@@ -8,27 +8,27 @@ class LongBasicsTask {
    * Сколько бит в памяти занимает значение типа long?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 64;
   }
 
   /**
    * Сколько байт в памяти занимает значение типа long?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 8;
   }
 
   /**
    * Какое минимальное число можно присвоить переменной с типом long?
    */
   long minValue() {
-    throw new TaskNotImplementedException();
+    return Long.MIN_VALUE;
   }
 
   /**
    * Какое максимальное число можно присвоить переменной с типом long?
    */
   long maxValue() {
-    throw new TaskNotImplementedException();
+    return Long.MAX_VALUE;
   }
 }

@@ -8,13 +8,13 @@ class CharBasicsTask {
    * Сколько бит в памяти занимает значение типа char?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 16;
   }
 
   /**
    * Сколько байт в памяти занимает значение типа char?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 2;
   }
 }
