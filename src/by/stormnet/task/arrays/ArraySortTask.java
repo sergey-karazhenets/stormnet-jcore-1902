@@ -9,7 +9,20 @@ class ArraySortTask {
    * используя алгоритм сортировки пузырьком.
    */
   int[] bubbleSortAsc(int[] values) {
-    throw new TaskNotImplementedException();
+    boolean sort = false;
+    int bub=0;
+    while(!sort){
+      sort = true;
+      for(int i = 0; i < values.length - 1; i++){
+        if (values[i] > values [i+1]){
+          sort = false;
+          bub = values[i];
+          values[i] = values[i+1];
+          values[i+1] = bub;
+        }
+      }
+    }
+    return values;
   }
 
   /**
@@ -17,6 +30,19 @@ class ArraySortTask {
    * используя алгоритм сортировки пузырьком.
    */
   int[] bubbleSortDesc(int[] values) {
-    throw new TaskNotImplementedException();
+    boolean sort = false;
+    int bub=0;
+    while(!sort){
+      sort = true;
+      for(int i = 0; i < values.length - 1; i++){
+        if (values[i] < values [i+1]){
+          sort = false;
+          bub = values[i];
+          values[i] = values[i+1];
+          values[i+1] = bub;
+        }
+      }
+    }
+    return values;
   }
 }
