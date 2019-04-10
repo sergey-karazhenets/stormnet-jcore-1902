@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="junit5" level="project" />
     <orderEntry type="library" name="hamcrest-2.1" level="project" />
+    <orderEntry type="library" name="mockito 2" level="project" />
   </component>
 </module>
