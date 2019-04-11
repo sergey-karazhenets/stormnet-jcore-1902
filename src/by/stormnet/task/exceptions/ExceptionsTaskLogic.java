@@ -2,6 +2,10 @@ package by.stormnet.task.exceptions;
 
 import java.util.function.Supplier;
 
+/**
+ * Здесь не нужно ничего редактировать.
+ * Смотрите задания в {@link ExceptionsTask}.
+ */
 class ExceptionsTaskLogic {
 
   private final Supplier<Integer> intValueSupplier;
