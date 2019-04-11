@@ -51,6 +51,10 @@ class MethodsCallTask {
    * и в качестве ответа на задание верните результат вызова метода.
    */
   String concatStringsFromAnotherClass(MethodsCallTaskLogic logic, String str1, String str2) {
+//    char[] b=str1.toCharArray();
+//    if(b[b.length-1]==','){
+//      str1=str1.substring(0,str1.length()-1);
+//    }
     return logic.concatStrings(str1,str2);
   }
 }

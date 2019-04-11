@@ -73,8 +73,7 @@ class ExceptionsTask {
     try {
       return logic.calculateIntValue();
     }catch (IllegalStateException  | IllegalArgumentException e){
-      e.printStackTrace();
-      return logic.recover1()+logic.recover2();
+      return rec1+rec2;
     }
   }
 
