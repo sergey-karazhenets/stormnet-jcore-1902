@@ -5,7 +5,7 @@ import by.stormnet.task.TaskNotImplementedException;
 class ExceptionsTask {
 
   /**
-   * На вход в метод приходит объект ExceptionsTaskLogic.
+   * На вход в метод приходит объект типа ExceptionsTaskLogic.
    * У него есть методы calculateIntValue и recover1.
    *
    * Сделайте вызов метода calculateIntValue и верните полученное значение в качестве ответа на задание.
@@ -20,7 +20,7 @@ class ExceptionsTask {
   }
 
   /**
-   * На вход в метод приходит объект ExceptionsTaskLogic.
+   * На вход в метод приходит объект типа ExceptionsTaskLogic.
    * У него есть методы calculateIntValue, recover1 и recover2.
    *
    * Сделайте вызов метода calculateIntValue и верните полученное значение в качестве ответа на задание.
@@ -38,7 +38,7 @@ class ExceptionsTask {
   }
 
   /**
-   * На вход в метод приходит объект ExceptionsTaskLogic.
+   * На вход в метод приходит объект типа ExceptionsTaskLogic.
    * У него есть методы calculateIntValue, recover1 и recover2.
    *
    * Сделайте вызов метода calculateIntValue и верните полученное значение в качестве ответа на задание.
@@ -57,7 +57,7 @@ class ExceptionsTask {
   }
 
   /**
-   * На вход в метод приходит объект ExceptionsTaskLogic.
+   * На вход в метод приходит объект типа ExceptionsTaskLogic.
    * У него есть методы calculateIntValue, recover1 и doFinally.
    *
    * Сделайте вызов метода calculateIntValue и верните полученное значение в качестве ответа на задание.
