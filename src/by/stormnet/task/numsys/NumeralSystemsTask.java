@@ -29,8 +29,7 @@ class NumeralSystemsTask {
    * Сколько цифр содержит двоичная система счисления?
    */
   int binarySystemDigitsCount() {
-    throw new TaskNotImplementedException();
-  }
+    return 2;  }
 
   /**
    * Какое основание пятеричной системы счисления?

@@ -1,14 +1,11 @@
 package by.stormnet.task.methods;
 
-import by.stormnet.task.TaskNotImplementedException;
-
 class MethodsCallTaskLogic {
 
   void doNothing() {
-    // do nothing
   }
 
   String concatStrings(String str1, String str2) {
-    throw new TaskNotImplementedException();
+    return str1+str2;
   }
 }
