@@ -16,7 +16,17 @@ class ExceptionsTask {
    * следует вызвать метод recover1 и результат вернуть в качестве ответа на задание.
    */
   int handleException(ExceptionsTaskLogic logic) {
-    throw new TaskNotImplementedException();
+    try {
+      logic.calculateIntValue();
+
+    } catch (IllegalStateException e) {
+      int c = logic.recover1();
+      return c;
+
+    }
+    return logic.calculateIntValue();
+
+
   }
 
   /**
@@ -34,7 +44,16 @@ class ExceptionsTask {
    *  - IllegalArgumentException, то следует вызвать метод recover2 и результат вернуть в качестве ответа на задание.
    */
   int handleManyExceptions(ExceptionsTaskLogic logic) {
-    throw new TaskNotImplementedException();
+   try{
+     logic.calculateIntValue();
+   }catch(IllegalStateException e){
+     int x =logic.recover1();
+     return x;
+   } catch(IllegalArgumentException e){
+     int x =logic.recover2();
+     return x;
+   }
+   return logic.calculateIntValue();
   }
 
   /**
@@ -53,7 +72,13 @@ class ExceptionsTask {
    * Для обработки обоих исключений используйте только один блок catch.
    */
   int handleManyExceptions1(ExceptionsTaskLogic logic) {
-    throw new TaskNotImplementedException();
+    try{
+      logic.calculateIntValue();
+    }catch(IllegalArgumentException|IllegalStateException e){
+      int a = logic.recover1()+logic.recover2();
+      return a;
+    }
+    return logic.calculateIntValue();
   }
 
   /**
@@ -70,7 +95,15 @@ class ExceptionsTask {
    * Также в независимости от того возникло исключение или нет нужно делать вызов метода doFinally.
    */
   int handleExceptionWithFinally(ExceptionsTaskLogic logic) {
-    throw new TaskNotImplementedException();
+    try{
+      logic.calculateIntValue();
+    }catch (IllegalStateException e){
+      int f=logic.recover1();
+      return f;
+    }finally {
+      logic.doFinally();
+    }
+    return logic.calculateIntValue();
   }
 
   /**
@@ -79,7 +112,11 @@ class ExceptionsTask {
    *  - иначе следует вернуть значение x в качестве ответа на задание.
    */
   int throwException(int x) {
-    throw new TaskNotImplementedException();
+    if(x>0){
+      throw new IllegalArgumentException("Error");
+    } else {
+      return x;
+    }
   }
 
   /**
@@ -89,6 +126,10 @@ class ExceptionsTask {
    *  - иначе следует вернуть значение x в качестве ответа на задание.
    */
   int throwExceptionWithMessage(int x) {
-    throw new TaskNotImplementedException();
+    if(x>0){
+      throw new IllegalArgumentException("Invalid value");
+    } else {
+      return x;
+    }
   }
 }
