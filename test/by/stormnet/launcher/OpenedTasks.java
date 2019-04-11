@@ -4,11 +4,14 @@ import by.stormnet.task.arrays.ArraySortTaskTest;
 import by.stormnet.task.arrays.ArraysTaskTest;
 import by.stormnet.task.conditionals.IfElseTaskTest;
 import by.stormnet.task.conditionals.SwitchTaskTest;
+import by.stormnet.task.exceptions.ExceptionsTaskTest;
 import by.stormnet.task.loops.DoWhileLoopTaskTest;
 import by.stormnet.task.loops.ForLoopTaskTest;
 import by.stormnet.task.loops.WhileLoopTaskTest;
 import by.stormnet.task.math.DivideOnZeroTaskTest;
+import by.stormnet.task.methods.MethodsCallTaskTest;
 import by.stormnet.task.numsys.NumeralSystemsTaskTest;
+import by.stormnet.task.recursion.RecursionTaskTest;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -24,7 +27,10 @@ public interface OpenedTasks {
       WhileLoopTaskTest.class,
       ArraysTaskTest.class,
       ArraySortTaskTest.class,
-      DivideOnZeroTaskTest.class
+      DivideOnZeroTaskTest.class,
+      MethodsCallTaskTest.class,
+      RecursionTaskTest.class,
+      ExceptionsTaskTest.class
   ).collect(Collectors.toList());
 
   List<String> packages = Stream.of(
