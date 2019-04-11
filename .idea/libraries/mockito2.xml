@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="mockito2">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/mockito2" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/mockito2" recursive="false" />
+  </library>
+</component>
