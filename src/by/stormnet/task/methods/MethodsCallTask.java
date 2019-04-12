@@ -9,7 +9,7 @@ class MethodsCallTask {
    * Сделайте вызов метода doNothingLogic из текущего метода.
    */
   void doNothing() {
-    throw new TaskNotImplementedException();
+    doNothingLogic();
   }
 
   void doNothingLogic() {
@@ -24,11 +24,11 @@ class MethodsCallTask {
    * ответа на задание верните результат работы метода concatStringsLogic.
    */
   String concatStrings(String str1, String str2) {
-    throw new TaskNotImplementedException();
+   return concatStringsLogic(str1,str2);
   }
 
   String concatStringsLogic(String str1, String str2) {
-    throw new TaskNotImplementedException();
+    return str1+str2;
   }
 
   /**
@@ -38,7 +38,7 @@ class MethodsCallTask {
    * Из текущего метода сделайте вызов метода doNothing из класса MethodsCallTaskLogic.
    */
   void doNothingFromAnotherClass(MethodsCallTaskLogic logic) {
-    throw new TaskNotImplementedException();
+    logic.doNothing();
   }
 
   /**
@@ -51,6 +51,6 @@ class MethodsCallTask {
    * и в качестве ответа на задание верните результат вызова метода.
    */
   String concatStringsFromAnotherClass(MethodsCallTaskLogic logic, String str1, String str2) {
-    throw new TaskNotImplementedException();
+    return logic.concatStrings(str1, str2);
   }
 }

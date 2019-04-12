@@ -9,6 +9,8 @@ class MethodsCallTaskLogic {
   }
 
   String concatStrings(String str1, String str2) {
-    throw new TaskNotImplementedException();
+
+      return str1+str2;
+
   }
 }
