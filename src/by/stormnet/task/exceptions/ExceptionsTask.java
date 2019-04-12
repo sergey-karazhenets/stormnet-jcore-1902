@@ -68,12 +68,11 @@ class ExceptionsTask {
    * Для обработки обоих исключений используйте только один блок catch.
    */
   int handleManyExceptions1(ExceptionsTaskLogic logic) {
-    int rec1=logic.recover1();
-    int rec2=logic.recover2();
+
     try {
       return logic.calculateIntValue();
     }catch (IllegalStateException  | IllegalArgumentException e){
-      return rec1+rec2;
+      return logic.recover1()+logic.recover2();
     }
   }
 
