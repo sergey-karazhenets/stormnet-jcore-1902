@@ -16,6 +16,10 @@ class RecursionTask {
    *  - 5! = 1 * 2 * 3 * 4 * 5 = 120
    */
   long factorial(int x) {
-    throw new TaskNotImplementedException();
+      long y=(long)x;
+      if (y>1) {
+        y*=factorial(--x);
+      }
+    return y;
   }
 }
