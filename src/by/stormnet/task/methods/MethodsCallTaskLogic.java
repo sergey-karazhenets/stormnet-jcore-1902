@@ -5,10 +5,11 @@ import by.stormnet.task.TaskNotImplementedException;
 class MethodsCallTaskLogic {
 
   void doNothing() {
-    // do nothing
+   // System.out.println(1);
   }
 
   String concatStrings(String str1, String str2) {
-    throw new TaskNotImplementedException();
+    String res = str1.concat(str2);
+    return res;
   }
 }
