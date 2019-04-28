@@ -89,7 +89,7 @@ class ExceptionsTask {
   int handleExceptionWithFinally(ExceptionsTaskLogic logic) {
     try {
       logic.calculateIntValue();
-    } catch (IllegalStateException ex) {
+    } catch (IllegalStateException e) {
       return logic.recover1();
     } finally {
       logic.doFinally();
