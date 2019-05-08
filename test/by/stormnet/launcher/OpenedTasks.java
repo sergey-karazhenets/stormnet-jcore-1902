@@ -11,7 +11,6 @@ import by.stormnet.task.loops.WhileLoopTaskTest;
 import by.stormnet.task.math.DivideOnZeroTaskTest;
 import by.stormnet.task.methods.MethodsCallTaskTest;
 import by.stormnet.task.recursion.RecursionTaskTest;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -32,5 +31,9 @@ public interface OpenedTasks {
       ExceptionsTaskTest.class
   ).collect(Collectors.toList());
 
-  List<String> packages = Collections.emptyList();
+  List<String> packages = Stream.of(
+      "collections"
+  )
+      .map("by.stormnet.task."::concat)
+      .collect(Collectors.toList());
 }
