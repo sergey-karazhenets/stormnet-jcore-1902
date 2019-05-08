@@ -34,7 +34,10 @@ public interface OpenedTasks {
   ).collect(Collectors.toList());
 
   List<String> packages = Stream.of(
-      "by.stormnet.task.types",
-      "by.stormnet.task.operators"
-  ).collect(Collectors.toList());
+      "types",
+      "operators",
+      "collections"
+  )
+      .map("by.stormnet.task."::concat)
+      .collect(Collectors.toList());
 }
