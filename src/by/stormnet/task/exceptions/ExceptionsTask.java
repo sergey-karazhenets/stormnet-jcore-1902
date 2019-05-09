@@ -50,8 +50,8 @@ class ExceptionsTask {
      int x =logic.recover1();
      return x;
    } catch(IllegalArgumentException e){
-     int x =logic.recover2();
-     return x;
+     return logic.recover2();
+
    }
    return logic.calculateIntValue();
   }
