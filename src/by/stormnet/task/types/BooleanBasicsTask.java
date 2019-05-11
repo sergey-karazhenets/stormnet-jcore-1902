@@ -8,20 +8,20 @@ class BooleanBasicsTask {
    * Как много значений может хранить/представлять тип boolean?
    */
   int possibleValuesCount() {
-    throw new TaskNotImplementedException();
+    return 2;
   }
 
   /**
    * Верните значение false.
    */
   boolean returnFalse() {
-    throw new TaskNotImplementedException();
+    return false;
   }
 
   /**
    * Верните значение true.
    */
   boolean returnTrue() {
-    throw new TaskNotImplementedException();
+    return true;
   }
 }

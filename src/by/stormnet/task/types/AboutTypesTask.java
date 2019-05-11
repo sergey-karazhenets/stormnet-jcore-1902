@@ -8,62 +8,62 @@ class AboutTypesTask {
    * Сколько примитивных типов существует в Java?
    */
   int primitiveTypesCount() {
-    throw new TaskNotImplementedException();
+    return 8;
   }
 
   /**
    * Названия всех примитивных типов, разделенные запятой.
    */
   String primitiveTypes() {
-    throw new TaskNotImplementedException();
+    return "byte, short, int, long, boolean, float, char, double";
   }
 
   /**
    * Названия всех запакованых примитивных типов, разделенные запятой.
    */
-  String boxedPrimitiveTypes() {
-    throw new TaskNotImplementedException();
+  String boxedPrimitiveTypes(){
+    return "Byte, Short, Integer, Long, Boolean, Float, Character, Double ";
   }
 
   /**
    * Названия всех числовых и целочисленных примитивных типов, разделенные запятой.
    */
   String numericPrimitiveTypes() {
-    throw new TaskNotImplementedException();
+    return "byte, short, int, long, float, char";
   }
 
   /**
    * Названия всех вещественных примитивных типов, разделенные запятой.
    */
   String floatingPointNumericPrimitiveTypes() {
-    throw new TaskNotImplementedException();
+    return "byte, char, int, long, short";
   }
 
   /**
    * Название логического типа.
    */
   String logicalType() {
-    throw new TaskNotImplementedException();
+    return "boolean ";
   }
 
   /**
    * Название запакованного логического типа.
    */
   String boxedLogicalType() {
-    throw new TaskNotImplementedException();
+    return "Boolean";
   }
 
   /**
    * Название типа, который не может хранить данные и обозначает, что метод ничего не возвращает.
    */
   String nothingType() {
-    throw new TaskNotImplementedException();
+   return "void";
   }
 
   /**
    * Название запакованного типа, который не может хранить данные и обозначает, что метод ничего не возвращает.
    */
   String boxedNothingType() {
-    throw new TaskNotImplementedException();
+    return "Void";
   }
 }

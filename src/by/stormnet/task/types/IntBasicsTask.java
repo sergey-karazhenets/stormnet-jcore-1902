@@ -8,27 +8,27 @@ class IntBasicsTask {
    * Сколько бит в памяти занимает значение типа int?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 32;
   }
 
   /**
    * Сколько байт в памяти занимает значение типа int?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 4;
   }
 
   /**
    * Какое минимальное число можно присвоить переменной с типом int?
    */
   int minValue() {
-    throw new TaskNotImplementedException();
+    return Integer.MIN_VALUE;
   }
 
   /**
    * Какое максимальное число можно присвоить переменной с типом int?
    */
   int maxValue() {
-    throw new TaskNotImplementedException();
+    return Integer.MIN_VALUE;
   }
 }

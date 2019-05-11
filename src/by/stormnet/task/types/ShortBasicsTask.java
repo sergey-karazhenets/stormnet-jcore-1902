@@ -8,27 +8,27 @@ class ShortBasicsTask {
    * Сколько бит в памяти занимает значение типа short?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 16;
   }
 
   /**
    * Сколько байт в памяти занимает значение типа short?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 4;
   }
 
   /**
    * Какое минимальное число можно присвоить переменной с типом short?
    */
   short minValue() {
-    throw new TaskNotImplementedException();
-  }
+    return Short.MIN_VALUE;
+      }
 
   /**
    * Какое максимальное число можно присвоить переменной с типом short?
    */
   short maxValue() {
-    throw new TaskNotImplementedException();
+    return Short.MAX_VALUE ;
   }
 }

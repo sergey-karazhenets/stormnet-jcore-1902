@@ -8,7 +8,7 @@ class BitwiseOperatorsTask {
    * Bitwise operators separated by the comma.
    */
   String operators() {
-    throw new TaskNotImplementedException();
+    return "&, |, ^, ~, >>, <<, >>>";
   }
 
   /**
@@ -16,7 +16,7 @@ class BitwiseOperatorsTask {
    * Bits count starts from 0.
    */
   int setThirdBitToZeroUsingAnd(byte b) {
-    throw new TaskNotImplementedException();
+    return b&~(1<<3);
   }
 
   /**
@@ -24,7 +24,7 @@ class BitwiseOperatorsTask {
    * Bits count starts from 0.
    */
   int setThirdBitToOneUsingOr(byte b) {
-    throw new TaskNotImplementedException();
+    return b|=(1<<3);
   }
 
   /**
@@ -32,14 +32,14 @@ class BitwiseOperatorsTask {
    * Bits count starts from 0.
    */
   int invertThirdBitUsingXor(byte b) {
-    throw new TaskNotImplementedException();
+    return b^(1<<3);
   }
 
   /**
    * Invert all bits of the byte using 'not' operator.
    */
   int invertAllBitsUsingNot(byte b) {
-    throw new TaskNotImplementedException();
+    return ~b;
   }
 
   /**
@@ -47,6 +47,6 @@ class BitwiseOperatorsTask {
    * using 'left shift' operator.
    */
   int shiftZeroBit4Left(byte b) {
-    throw new TaskNotImplementedException();
+    return b<<4;
   }
 }

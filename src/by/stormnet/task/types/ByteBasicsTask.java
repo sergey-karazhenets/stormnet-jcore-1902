@@ -8,27 +8,27 @@ class ByteBasicsTask {
    * Сколько бит в памяти занимает один байт?
    */
   int bitsInMemory() {
-    throw new TaskNotImplementedException();
+    return 8;
   }
 
   /**
    * Сколько байт в памяти занимает один байт?
    */
   int bytesInMemory() {
-    throw new TaskNotImplementedException();
+    return 1;
   }
 
   /**
    * Какое минимальное число можно присвоить перменной с типом byte?
    */
   byte minValue() {
-    throw new TaskNotImplementedException();
+    return Byte.MIN_VALUE;
   }
 
   /**
    * Какое максимальное число можно присвоить перменной с типом byte?
    */
   byte maxValue() {
-    throw new TaskNotImplementedException();
+    return Byte.MAX_VALUE;
   }
 }

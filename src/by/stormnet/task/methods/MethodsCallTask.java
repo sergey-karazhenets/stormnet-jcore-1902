@@ -9,10 +9,13 @@ class MethodsCallTask {
    * Сделайте вызов метода doNothingLogic из текущего метода.
    */
   void doNothing() {
-    throw new TaskNotImplementedException();
+   {
+      doNothingLogic();
+   }
   }
 
   void doNothingLogic() {
+
     // do nothing
   }
 

@@ -7,17 +7,26 @@ class ExceptionsTask {
   /**
    * На вход в метод приходит объект типа ExceptionsTaskLogic.
    * У него есть методы calculateIntValue и recover1.
-   *
+   * <p>
    * Сделайте вызов метода calculateIntValue и верните полученное значение в качестве ответа на задание.
-   *
+   * <p>
    * При этом учтите, что метод calculateIntValue может выбрасывать исключение IllegalStateException.
-   *
+   * <p>
    * Поэтому дополнительно нужно сделать обработку исключения, и в случае, если оно возникает, то
    * следует вызвать метод recover1 и результат вернуть в качестве ответа на задание.
    */
   int handleException(ExceptionsTaskLogic logic) {
-    throw new TaskNotImplementedException();
+    int res;
+    try {
+      res = logic.calculateIntValue();
+    } catch (IllegalStateException ex) {
+      res = logic.recover1();
+    }
+    return res;
   }
+
+
+
 
   /**
    * На вход в метод приходит объект типа ExceptionsTaskLogic.
@@ -34,7 +43,15 @@ class ExceptionsTask {
    *  - IllegalArgumentException, то следует вызвать метод recover2 и результат вернуть в качестве ответа на задание.
    */
   int handleManyExceptions(ExceptionsTaskLogic logic) {
-    throw new TaskNotImplementedException();
+    int res;
+    try {
+      res = logic.calculateIntValue();
+    } catch (IllegalStateException ex){
+      res = logic.recover1();
+    } catch (IllegalArgumentException ex){
+      res = logic.recover2();
+    }
+    return res;
   }
 
   /**
@@ -53,7 +70,13 @@ class ExceptionsTask {
    * Для обработки обоих исключений используйте только один блок catch.
    */
   int handleManyExceptions1(ExceptionsTaskLogic logic) {
-    throw new TaskNotImplementedException();
+    int res;
+    try {
+      res = logic.calculateIntValue();
+    } catch (IllegalStateException | IllegalArgumentException ex) {
+      res = logic.recover1() + logic.recover2();
+    }
+    return res;
   }
 
   /**
@@ -70,7 +93,15 @@ class ExceptionsTask {
    * Также в независимости от того возникло исключение или нет нужно делать вызов метода doFinally.
    */
   int handleExceptionWithFinally(ExceptionsTaskLogic logic) {
-    throw new TaskNotImplementedException();
+    int res;
+    try {
+      res = logic.calculateIntValue();
+    } catch (IllegalStateException ex){
+      res = logic.recover1();
+    } finally {
+      logic.doFinally();
+    }
+    return res;
   }
 
   /**
@@ -79,7 +110,9 @@ class ExceptionsTask {
    *  - иначе следует вернуть значение x в качестве ответа на задание.
    */
   int throwException(int x) {
-    throw new TaskNotImplementedException();
+       if (x > 0) {
+      throw new IllegalArgumentException();
+    } else return x;
   }
 
   /**
@@ -89,6 +122,8 @@ class ExceptionsTask {
    *  - иначе следует вернуть значение x в качестве ответа на задание.
    */
   int throwExceptionWithMessage(int x) {
-    throw new TaskNotImplementedException();
+    if (x > 0) {
+      throw new IllegalArgumentException("Invalid value");
+    } else return x;
   }
 }
