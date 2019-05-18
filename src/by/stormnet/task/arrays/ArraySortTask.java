@@ -9,17 +9,16 @@ class ArraySortTask {
    * используя алгоритм сортировки пузырьком.
    */
   int[] bubbleSortAsc(int[] values) {
-    int[] value = {25, 54, 89, 83, 7, 5}; //внешний цикл каждый раз сокращает фрагмент массива так как внутренний цикл массива каждый раз ставит в конец фрагмента максимальный элемент
-    for (int i = value.length - 1; i > 0; i--) {//value.length-1 пишем для того чтобы не выйти за пределы массива
-      for (int j = 0; j < i; j++) {//сравниваем элементы попарно, если они имеют неправильный порядок, то меняем местами
-        if (value[j] > value[j + 1]) {
-          int elem = value[j];
-          value[j] = value[j + 1];
-          value[j + 1] = elem;
+    for(int i=0;i<values.length;i++){
+      for(int j=values.length-1;j>0;j--){
+        if(values[j]<values[j-1]){
+          int bubble=values[j];
+          values[j]=values[j-1];
+          values[j-1]=bubble;
         }
       }
     }
-    return value;
+    return values;
   }
 
   /**
@@ -27,15 +26,17 @@ class ArraySortTask {
    * используя алгоритм сортировки пузырьком.
    */
   int[] bubbleSortDesc(int[] values) {
-    for (int i = values.length - 1; i > 0; i--) {
-      for (int j = 0; j > i; j++) {
-        if (values[j] > values[j + 1]) {
-          int elem = values[j];
-          values[j] = values[j + 1];
-          values[j + 1] = elem;
+    for(int i=0;i<values.length;i++){
+      for(int j=values.length-1;j>0;j--){
+        if(values[j]>values[j-1]){
+          int buf=values[j];
+          values[j]=values[j-1];
+          values[j-1]=buf;
         }
       }
     }
     return values;
   }
 }
+
+

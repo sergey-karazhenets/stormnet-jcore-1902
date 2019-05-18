@@ -29,6 +29,6 @@ class IntBasicsTask {
    * Какое максимальное число можно присвоить переменной с типом int?
    */
   int maxValue() {
-    return Integer.MIN_VALUE;
+    return 2147483647;
   }
 }

@@ -9,13 +9,13 @@ class WhileLoopTask {
    * сумму чисел от 1 до 57 (не включительно).
    */
   int calculateSum() {
-    int x = 1;
-    int y = 1;
-    int i = x + y;
-    while (i < 57) {
-      return i;
+    int i=1;
+    int sum=0;
+    while(i!=57){
+      sum+=i;
+      i++;
     }
-    return 0;
+    return sum;
   }
 
   /**
@@ -27,14 +27,19 @@ class WhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSum(int x, int y) {
-    while ( x==y ){
-      return 0;
-    } while (x<y){
-      return x++;
-    }while (x>y){
-      return x--;
+    int sum=0;
+    while(x!=y){
+      sum+=x;
+      if(x==y){
+        sum=0;
+        break;
+      }else if(x<y){
+        x++;
+      }else if(x>y){
+        x--;
+      }
     }
-    return x+y;
+    return sum;
   }
 
   /**
@@ -45,12 +50,23 @@ class WhileLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    while(x<y){
-      return x++;
-    }while (x>y){
-      return x--;
+    int sub=x;
+    if(x<y){
+      sub+=x;
+      while(x<y+1){
+        sub-=x;
+        x++;
+      }
+    }else if(x>y){
+      sub+=x;
+      while(x>y-1){
+        sub-=x;
+        x--;
+      }
+    }else if(x==y){
+      sub-=x;
     }
-    return x-=y;
+    return sub;
   }
 
   /**
@@ -58,12 +74,14 @@ class WhileLoopTask {
    * произведение только четных чисел от 1 до 42 (не включительно).
    */
   long calculateEvenMultiply() {
-    int res = 0;
-    for (int i = 0; i < 10; i++) {
-      for (int a = 0; a < 10; a++) {
-        res += i * a;
+    int i=1;
+    long mult=1;
+    while(i!=42){
+      if(i%2==0){
+        mult*=i;
       }
+      i++;
     }
-    return res;
+    return mult;
   }
 }

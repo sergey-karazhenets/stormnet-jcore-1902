@@ -24,25 +24,24 @@ class ForLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSum(int x, int y) {
-    int sum = 0;
-    if (x==y) {
-      return 0;
-    }
-    else if(x>y){
-      for (int i=x; x!=y; i--){
-         sum-=i;
+    int sum=0;
+    for(int i=x;i!=y;){
+      sum+=i;
+      if(i<y){
+        i++;
       }
-      return sum;
-    }
-    else  {
-      for (int i=x; i<y; i++){
-        if(i>y)
-          sum+=i;
+      if(i>y){
+        i--;
       }
-      return sum;
+      if(x==y){
+        sum=0;
+        break;
+      }
     }
-
+    return sum;
   }
+
+
 
   /**
    * Используя цикл for напишие код, который вернет
@@ -52,28 +51,24 @@ class ForLoopTask {
    *  - если x больше y, то значения x будут убывать на каждой итерации
    */
   int calculateSub(int x, int y) {
-    int res = x;
-    for (; x <= y || x >= y; ) {
-      if (x < y) {
-        x++;
-        if (x == y) {
-          res -= x;
-          break;
-        }
-        res -= x;
-      } else if (x > y) {
-        x--;
-        if (x == y) {
-          res -= x;
-          break;
-        }
-        res -= x;
-      } else {
-        res -= x;
-        break;
+    int sub=x;
+    if(x<y){
+      sub+=x;
+      for(int i=x;i<=y;){
+        sub-=i;
+        i++;
       }
+    }else if(x>y){
+      sub+=x;
+      for(int i=x;i>=y;){
+        sub-=i;
+        i--;
+      }
+    }else if(x==y){
+      sub-=x;
+      return sub;
     }
-    return res;
+    return sub;
   }
 
   /**
@@ -82,8 +77,7 @@ class ForLoopTask {
    */
   long calculateEvenMultiply() {
     long res = 1;
-    long a = 1;
-    for (; a < 42;a++) {
+    for (int a = 1; a < 42;a++) {
       if (a % 2 == 0) {
         res *= a;
       }
@@ -105,13 +99,15 @@ class ForLoopTask {
    * Суммируем результаты: 0 + 2 + 9 + ... + 9 + 18
    */
   int sumOfMultiplicationTable() {
-    int res = 0;
-    for (int i = 0; i < 10; i++) {
-      for (int a = 0; a < 10; a++) {
-        res += i * a;
+    int res = 1;
+    int sum = 0;
+    for (int i = 1; i < 10; i++) {
+      for (int a = 1; a < 10; a++) {
+        res = i * a;
+        sum+=res;
       }
     }
-    return res;
+    return sum;
   }
 }
 

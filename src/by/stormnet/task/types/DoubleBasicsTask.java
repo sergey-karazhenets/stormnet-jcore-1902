@@ -15,7 +15,7 @@ class DoubleBasicsTask {
    * Сколько байт в памяти занимает значение типа double?
    */
   int bytesInMemory() {
-    return 32;
+    return 8;
   }
 
   /**

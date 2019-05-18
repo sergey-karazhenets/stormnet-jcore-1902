@@ -9,13 +9,13 @@ class DoWhileLoopTask {
    * сумму чисел от 1 до 57 (не включительно).
    */
   int calculateSum() {
-    int i = 1;
-    int temp=0;
+    int i=1;
+    int sum=0;
     do{
-      temp +=i;
+      sum+=i;
       i++;
-    }while (i>57);
-    return temp;
+    }while(i<57);
+    return sum;
   }
 
   /**

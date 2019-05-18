@@ -143,7 +143,7 @@ class NumeralSystemsTask {
    * Как будет выглядеть число 434 в двоичной системе счисления?
    */
   String binarySystem434() {
-    return " 110110010";
+    return "110110010";
   }
 
   /**
@@ -171,7 +171,7 @@ class NumeralSystemsTask {
    * Как будет выглядеть восьмеричное число 4371 в десятеричной системе счисления?
    */
   int octalToDecimal() {
-    return 157;
+    return 2297;
   }
 
   /**

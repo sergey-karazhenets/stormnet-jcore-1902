@@ -18,7 +18,7 @@ class DivideOnZeroTask {
       return 1;
     } else if (d == Float.NEGATIVE_INFINITY) {
       return -1;
-    } else if (d != Float.NaN) {
+    } else if (Float.isNaN(d)) {
       return 0;
     } else {
       return d;
@@ -39,7 +39,7 @@ class DivideOnZeroTask {
       return 1;
     } else if (v == Double.NEGATIVE_INFINITY) {
       return -1;
-    } else if (v != Double.NaN) {
+    } else if(Double.isNaN(v)) {
       return 0;
     } else {
       return v;

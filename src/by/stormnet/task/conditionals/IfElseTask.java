@@ -28,18 +28,16 @@ class IfElseTask {
      * - на 4, если x больше либо равно 15 и y больше 15.
      */
     int ifElseIf(float x, float y) {
-        float var = x * y;
-        if (x < 10) {
-            return (int) var * 2;
+        if(x<10){
+            return (int) (x/y)*2;
+        }else if(x>=10 && x<15) {
+            return (int) (x/y)*3;
+        }else if(x>=15 && y>15){
+            return (int) (x/y)*4;
+        }else {
+            return (int) x;
         }
-        if (x >= 10 && x < 15) {
-            return (int) var * 3;
-        } else if (x >= 15 && y > 15) {
-            return (int) var * 4;
-        }
-        return 0;
     }
-
 
     /**
      * Используя блок if/else if/else, напишите код, который вернет

@@ -15,7 +15,7 @@ class ShortBasicsTask {
    * Сколько байт в памяти занимает значение типа short?
    */
   int bytesInMemory() {
-    return 4;
+    return 2;
   }
 
   /**

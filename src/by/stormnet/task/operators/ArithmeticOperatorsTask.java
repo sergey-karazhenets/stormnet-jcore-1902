@@ -15,7 +15,7 @@ class ArithmeticOperatorsTask {
    * Сокрщенные формы арифметические операторы, разделенные запятой.
    */
   String operatorsShortForm() {
-    return "+=,-=,*=,/=,&=";
+    return "+=, -=, *=, /=, %=";
   }
 
   /**
