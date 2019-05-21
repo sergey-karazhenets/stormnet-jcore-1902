@@ -1,5 +1,6 @@
 package by.stormnet.task.collections;
 
+import static by.stormnet.TestFunctions.setOf;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.empty;
@@ -197,13 +198,5 @@ public class SetTaskTest {
         Arguments.of(setOf(1), setOf(1), true),
         Arguments.of(setOf(1, 2, 2, 3), setOf(1, 2, 3, 3), true)
     );
-  }
-
-  @SafeVarargs
-  static <T> Set<T> setOf(T... values) {
-    if (values.length == 0) {
-      return new HashSet<>(0);
-    }
-    return new HashSet<>(Arrays.asList(values));
   }
 }
