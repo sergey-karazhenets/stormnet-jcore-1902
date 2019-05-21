@@ -1,5 +1,6 @@
 package by.stormnet.task.collections;
 
+import static by.stormnet.TestFunctions.mutableListOf;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.contains;
@@ -16,7 +17,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -101,9 +101,9 @@ public class ListTaskTest {
 
   static Collection<Arguments> addAtIndexArgs() {
     return Arrays.asList(
-        Arguments.of(modifiableList(1L, 2L), 0, 0L, Arrays.asList(0L, 1L, 2L)),
-        Arguments.of(modifiableList(1L, 2L), 1, 0L, Arrays.asList(1L, 0L, 2L)),
-        Arguments.of(modifiableList(1L, 2L), 2, 0L, Arrays.asList(1L, 2L, 0L))
+        Arguments.of(mutableListOf(1L, 2L), 0, 0L, Arrays.asList(0L, 1L, 2L)),
+        Arguments.of(mutableListOf(1L, 2L), 1, 0L, Arrays.asList(1L, 0L, 2L)),
+        Arguments.of(mutableListOf(1L, 2L), 2, 0L, Arrays.asList(1L, 2L, 0L))
     );
   }
 
@@ -116,9 +116,9 @@ public class ListTaskTest {
 
   static Collection<Arguments> updateAtIndexArgs() {
     return Arrays.asList(
-        Arguments.of(modifiableList(1L, 2L), 0, 0L, Arrays.asList(0L, 2L)),
-        Arguments.of(modifiableList(1L, 2L), 1, 0L, Arrays.asList(1L, 0L)),
-        Arguments.of(modifiableList(1L, 2L, 3L, 4L), 3, 0L, Arrays.asList(1L, 2L, 3L, 0L))
+        Arguments.of(mutableListOf(1L, 2L), 0, 0L, Arrays.asList(0L, 2L)),
+        Arguments.of(mutableListOf(1L, 2L), 1, 0L, Arrays.asList(1L, 0L)),
+        Arguments.of(mutableListOf(1L, 2L, 3L, 4L), 3, 0L, Arrays.asList(1L, 2L, 3L, 0L))
     );
   }
 
@@ -131,9 +131,9 @@ public class ListTaskTest {
 
   static Collection<Arguments> removeAtIndexArgs() {
     return Arrays.asList(
-        Arguments.of(modifiableList(1L, 2L, 3L), 0, Arrays.asList(2L, 3L)),
-        Arguments.of(modifiableList(1L, 2L, 3L), 1, Arrays.asList(1L, 3L)),
-        Arguments.of(modifiableList(1L, 2L, 3L, 4L), 2, Arrays.asList(1L, 2L, 4L))
+        Arguments.of(mutableListOf(1L, 2L, 3L), 0, Arrays.asList(2L, 3L)),
+        Arguments.of(mutableListOf(1L, 2L, 3L), 1, Arrays.asList(1L, 3L)),
+        Arguments.of(mutableListOf(1L, 2L, 3L, 4L), 2, Arrays.asList(1L, 2L, 4L))
     );
   }
 
@@ -146,9 +146,9 @@ public class ListTaskTest {
 
   static Collection<Arguments> removeValueArgs() {
     return Arrays.asList(
-        Arguments.of(modifiableList(1L, 2L, 3L), 1L, Arrays.asList(2L, 3L)),
-        Arguments.of(modifiableList(1L, 2L, 3L), 2L, Arrays.asList(1L, 3L)),
-        Arguments.of(modifiableList(1L, 2L, 3L, 4L), 3L, Arrays.asList(1L, 2L, 4L))
+        Arguments.of(mutableListOf(1L, 2L, 3L), 1L, Arrays.asList(2L, 3L)),
+        Arguments.of(mutableListOf(1L, 2L, 3L), 2L, Arrays.asList(1L, 3L)),
+        Arguments.of(mutableListOf(1L, 2L, 3L, 4L), 3L, Arrays.asList(1L, 2L, 4L))
     );
   }
 
@@ -196,12 +196,12 @@ public class ListTaskTest {
 
   static Collection<Arguments> removeAllNullOrNegativeValuesArgs() {
     return Arrays.asList(
-        Arguments.of(modifiableList(), Collections.emptyList()),
-        Arguments.of(modifiableList(1, 2, 3), Arrays.asList(1, 2, 3)),
-        Arguments.of(modifiableList(1, null, 3), Arrays.asList(1, 3)),
-        Arguments.of(modifiableList(1, null, null, 4, null, 6), Arrays.asList(1, 4, 6)),
-        Arguments.of(modifiableList(1, -4, 2, 5, -1), Arrays.asList(1, 2, 5)),
-        Arguments.of(modifiableList(1, -4, 2, null, 1, null, -2, 5), Arrays.asList(1, 2, 1, 5))
+        Arguments.of(mutableListOf(), Collections.emptyList()),
+        Arguments.of(mutableListOf(1, 2, 3), Arrays.asList(1, 2, 3)),
+        Arguments.of(mutableListOf(1, null, 3), Arrays.asList(1, 3)),
+        Arguments.of(mutableListOf(1, null, null, 4, null, 6), Arrays.asList(1, 4, 6)),
+        Arguments.of(mutableListOf(1, -4, 2, 5, -1), Arrays.asList(1, 2, 5)),
+        Arguments.of(mutableListOf(1, -4, 2, null, 1, null, -2, 5), Arrays.asList(1, 2, 1, 5))
     );
   }
 
@@ -241,10 +241,5 @@ public class ListTaskTest {
         Arguments.of(Collections.singletonList(null), false),
         Arguments.of(Arrays.asList("str1", "str2"), false)
     );
-  }
-
-  @SafeVarargs
-  private static <T> List<T> modifiableList(T... values) {
-    return Stream.of(values).collect(Collectors.toList());
   }
 }
