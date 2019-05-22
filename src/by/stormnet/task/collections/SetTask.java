@@ -1,6 +1,9 @@
 package by.stormnet.task.collections;
 
 import by.stormnet.task.TaskNotImplementedException;
+
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -10,21 +13,23 @@ class SetTask {
    * Создать пустой HashSet, в котором можно хранить int значения.
    */
   Set<Integer> emptyIntHashSet() {
-    throw new TaskNotImplementedException();
+    Set<Integer> in= new HashSet<>();
+    return in;
   }
 
   /**
    * Создать пустой HashSet, в котором можно хранить String значения.
    */
   Set<String> emptyStringHashSet() {
-    throw new TaskNotImplementedException();
+    Set<String> hn= new HashSet<>();
+    return hn;
   }
 
   /**
    * Определить размер множества.
    */
   int size(Set<Integer> values) {
-    throw new TaskNotImplementedException();
+    return values.size();
   }
 
   /**
@@ -45,14 +50,16 @@ class SetTask {
    * Преобразовать множество values в ArrayList.
    */
   List<Integer> intSetToArrayList(Set<Integer> values) {
-    throw new TaskNotImplementedException();
+    List<Integer> nb= new ArrayList<>();
+    nb.addAll(values);
+    return nb;
   }
 
   /**
    * Удалить из множества values значение value.
    */
   void removeValue(Set<Integer> values, int value) {
-    throw new TaskNotImplementedException();
+    values.remove(value);
   }
 
   /**
