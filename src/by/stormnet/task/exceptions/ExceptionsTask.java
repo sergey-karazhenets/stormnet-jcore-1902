@@ -1,7 +1,5 @@
 package by.stormnet.task.exceptions;
 
-import by.stormnet.task.TaskNotImplementedException;
-
 class ExceptionsTask {
 
   /**
