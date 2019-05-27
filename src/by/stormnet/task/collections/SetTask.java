@@ -36,14 +36,21 @@ class SetTask {
    * Создайть HashSet и заполнить его значениями из массива values.
    */
   Set<Integer> intSetFromArray(int... values) {
-    throw new TaskNotImplementedException();
+    Set<Integer> sets=new HashSet<>();
+    for(int i:values){
+      sets.add(i);
+    }
+    return sets;
   }
 
   /**
    * Преобразовать список values в HashSet.
    */
   Set<Integer> intSetFromArrayList(List<Integer> values) {
-    throw new TaskNotImplementedException();
+    Set<Integer> sets=new HashSet<>();
+    sets.addAll(values);
+    return sets;
+
   }
 
   /**
@@ -66,27 +73,39 @@ class SetTask {
    * Проверить есть ли во множестве values значение value.
    */
   boolean hasElement(Set<Integer> values, int value) {
-    throw new TaskNotImplementedException();
+    boolean bool=values.contains(value);
+    return bool;
   }
 
   /**
    * Объединить три множества set1, set2, set3 в одно множество.
    */
   Set<Integer> mergeSets(Set<Integer> set1, Set<Integer> set2, Set<Integer> set3) {
-    throw new TaskNotImplementedException();
+    Set<Integer> sets = new HashSet<>();
+    sets.addAll(set1);
+    sets.addAll(set2);
+    sets.addAll(set3);
+    return sets;
   }
 
   /**
    * Определить пустое ли множество.
    */
   boolean isEmpty(Set<Integer> values) {
-    throw new TaskNotImplementedException();
+    boolean bool;
+    if(values.size()==0){
+      bool=true;
+    }else{
+      bool=false;
+    }
+    return bool;
   }
 
   /**
    * Проверить равны ли два множества между собой.
    */
   boolean isEquals(Set<Integer> set1, Set<Integer> set2) {
-    throw new TaskNotImplementedException();
+    boolean bool=set1.equals(set2);
+    return bool;
   }
 }

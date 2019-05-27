@@ -3,6 +3,7 @@ package by.stormnet.task.collections;
 import by.stormnet.task.TaskNotImplementedException;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 class ListTask {
@@ -35,9 +36,9 @@ class ListTask {
      */
     List<Integer> intList(int... values) {
         List<Integer> value = new ArrayList<>();
-        value.add(25);
-        value.add(96);
-        value.add(87);
+        for(int i:values){
+            value.add(i);
+        }
         return value;
     }
 
@@ -82,8 +83,18 @@ class ListTask {
      * Проверить есть ли в списке строк strings строка str.
      */
     boolean hasElement(List<String> strings, String str) {
-        throw new TaskNotImplementedException();
+        boolean f=false;
+        for(String s:strings) {
+            if (s.equals(str)) {
+                f=true;
+                break;
+            } else{
+                f=false;
+            }
+        }
+        return f;
     }
+
 
     /**
      * Получить индекс элемента str в списке строк strings.
@@ -96,14 +107,24 @@ class ListTask {
      * Удалить из списка все отрицательные значения и все элементы равные null.
      */
     void removeAllNullOrNegativeValues(List<Integer> values) {
-        throw new TaskNotImplementedException();
+        Iterator<Integer> iterator=values.iterator();
+        while (iterator.hasNext()){
+            Integer val=iterator.next();
+            if(val==null || val<0){
+                iterator.remove();
+            }
+        }
     }
 
     /**
      * Объединить три списка values1, values2 и values3 в один список.
      */
     List<Integer> mergeLists(List<Integer> values1, List<Integer> values2, List<Integer> values3) {
-        throw new TaskNotImplementedException();
+        List<Integer> list=new ArrayList<>();
+        list.addAll(values1);
+        list.addAll(values2);
+        list.addAll(values3);
+        return list;
     }
 
     /**

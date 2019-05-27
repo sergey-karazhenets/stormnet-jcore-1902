@@ -8,9 +8,8 @@ class ArraysTask {
    * Получить длину массива.
    */
   int arrayLength(int[] values) {
+    return values.length;
 
-    System.out.println(values.length);
-    return 0;
   }
 
 
@@ -18,41 +17,41 @@ class ArraysTask {
    * Получить первый элемент массива.
    */
   int firstElement(int[] values) {
-    int[] arr = new int[]{2, 3, 5, 6};
-    int a = arr[0];
-    System.out.println(a);
-    return a;
+      return values [0];
   }
 
   /**
    * Получить последний элемент массива.
    */
   int lastElement(int[] values) {
-    int last = values[values.length - 1];
-    System.out.println(last);
-    return last;
+      int x;
+      x=values.length;
+      return values[x-1];
   }
 
   /**
    * Получить сумму 3 - 7 элементов массива.
    */
   int elementsSum(int[] values) {
-    int[] arr = new int[]{2, 5, 7, 8, 9, 4, 5};
-    int k = arr[3] + arr[7];
-    return k;
+      int last = 0;
+      for (int i=0; i<values.length; i++) {
+          if (i >= 3 && i <= 7) {
+              last += values[i];
+          }
+      }
+      return last;
   }
 
   /**
    * Получить новый массив, в котором будут 3, 5 - 7 элементы из исходного массива.
    */
   int[] selectElements(int[] values) {
-    int[] value = new int[8];
-    value [3] = 18;
-    value [5] = 52;
-    value [6] = 87;
-    value [7] = 69;
-    for (int i = 0; i < 8; i++) {
-      System.out.println(values[i]);
+    int[] value = new int[4];
+      for(int i=0,k=0;i<values.length;i++){
+          if(i==3 || i>=5 && i<=7){
+              value[k]=values[i];
+              k++;
+          }
     }
     return value;
   }
@@ -67,9 +66,9 @@ class ArraysTask {
           if (i == 'k') {
               count++;
           }
-          return count;
       }
-      return 0;
+      return count;
+
   }
 
       /**
@@ -84,19 +83,16 @@ class ArraysTask {
        * Сумма полученных сумм со строк: 9 + 10 = 20
        */
       int rowsSum (int[][] matrix){
-          int[] arrays = {1, 12, 15, 16};
-          int[] myArrays = {2, 5, 7, 9};
-          int sum = 0;
-          for (int i = 0; i < arrays.length; i++) {
-              sum = sum + arrays[i];
-              System.out.println(sum);
+          int arrays = 0;
+          int myArrays = 0;
+          for (int i = 0; i < matrix.length; i++) {
+              for (int j = 0; j < matrix[i].length; j++) {
+                  arrays += matrix[i][j];
+              }
+              myArrays += arrays;
+              arrays = 0;
           }
-          int sum1 = 0;
-          for (int i = 0; i < myArrays.length; i++) {
-              sum1 = sum1 + myArrays[i];
-              System.out.println(sum1);
-          }
-          return sum + sum1;
+          return myArrays;
       }
-  }
+}
 
