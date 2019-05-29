@@ -1,9 +1,9 @@
 package by.stormnet.task.collections;
 
 import by.stormnet.task.TaskNotImplementedException;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+
+import java.util.*;
+import java.util.stream.Collectors;
 
 class MapTask {
 
@@ -11,21 +11,24 @@ class MapTask {
    * Создать пустую HashMap.
    */
   Map<Integer, String> emptyHashMap() {
-    throw new TaskNotImplementedException();
+    Map<Integer, String> emptyHashMap = new HashMap<>();
+    return emptyHashMap;
   }
 
   /**
    * Определить размер коллекции.
    */
   int size(Map<Integer, String> values) {
-    throw new TaskNotImplementedException();
+    return values.size();
   }
 
   /**
    * Создать HashMap с одной записью, где с ключом key будет ассоциировано value.
    */
   Map<Integer, String> mapFromSingleValue(int key, String value) {
-    throw new TaskNotImplementedException();
+    Map<Integer, String> mapFromSingleValue = new HashMap<>();
+    mapFromSingleValue.put(key, value);
+    return mapFromSingleValue;
   }
 
   /**
@@ -37,49 +40,55 @@ class MapTask {
    * Ожидаемый результат: {1=v1, 2=v2, 3=v3}.
    */
   Map<Integer, String> mapFromMultiValues(List<Integer> keys, List<String> values) {
-    throw new TaskNotImplementedException();
+    Map<Integer, String> mapFromMultiValues = new HashMap<>();
+
+    for (int key : keys) {
+      String value = values.get(keys.indexOf(key));
+      mapFromMultiValues.put(key, value);
+    }
+    return mapFromMultiValues;
   }
 
   /**
    * Получить множество ключей из map.
    */
   Set<Integer> keys(Map<Integer, String> map) {
-    throw new TaskNotImplementedException();
+    return map.keySet();
   }
 
   /**
    * Получить список значений из map.
    */
   List<String> values(Map<Integer, String> map) {
-    throw new TaskNotImplementedException();
+    return map.values().stream().collect(Collectors.toList());
   }
 
   /**
    * Получить множество всех записей из map.
    */
   Set<Map.Entry<Integer, String>> entries(Map<Integer, String> map) {
-    throw new TaskNotImplementedException();
+    return map.entrySet();
   }
 
   /**
    * Получить из map значение, которое соответсвует ключу key.
    */
   String value(Map<Integer, String> map, Integer key) {
-    throw new TaskNotImplementedException();
+    return map.get(key);
   }
 
   /**
    * Получить ключ из записи.
    */
   Integer keyFromEntry(Map.Entry<Integer, String> entry) {
-    throw new TaskNotImplementedException();
+    return entry.getKey();
   }
 
   /**
    * Получить значение из записи.
    */
   String valueFromEntry(Map.Entry<Integer, String> entry) {
-    throw new TaskNotImplementedException();
+    return entry.getValue();
   }
 
   /**
@@ -87,41 +96,47 @@ class MapTask {
    * Значение должно стать ключом, а ключ -- значением.
    */
   Map<String, Integer> switchKeyValue(Map<Integer, String> map) {
-    throw new TaskNotImplementedException();
+    Map<String, Integer> mapInversed = map.entrySet().stream().collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey));
+    return mapInversed;
   }
 
   /**
    * Получить список значений из map для всех ключей из множества keys.
    */
   List<String> valuesByKeys(Map<Integer, String> map, Set<Integer> keys) {
-    throw new TaskNotImplementedException();
+    List<String> mapValuesByKeys = new ArrayList<>();
+
+    for (int key : keys) {
+      mapValuesByKeys.add(map.get(key));
+    }
+    return mapValuesByKeys;
   }
 
   /**
    * Удалить из map запись с ключом key.
    */
   void remove(Map<Integer, String> map, Integer key) {
-    throw new TaskNotImplementedException();
+    map.remove(key);
   }
 
   /**
    * Проверить есть ли в map запись с ключом key.
    */
   boolean containsKey(Map<Integer, String> map, Integer key) {
-    throw new TaskNotImplementedException();
+    return map.containsKey(key);
   }
 
   /**
    * Проверить есть ли в map запись со значением value.
    */
   boolean containsValue(Map<Integer, String> map, String value) {
-    throw new TaskNotImplementedException();
+    return map.containsValue(value);
   }
 
   /**
    * Определить есть ли записи в map.
    */
   boolean isEmpty(Map<Integer, String> map) {
-    throw new TaskNotImplementedException();
+    return map.isEmpty();
   }
 }
